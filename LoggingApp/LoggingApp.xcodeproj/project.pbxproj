@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0530C023B4C59D00F1BD84 /* WSPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0530BE23B4C59D00F1BD84 /* WSPTableViewCell.swift */; };
+		DA0530C123B4C59D00F1BD84 /* WSPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0530BF23B4C59D00F1BD84 /* WSPTableViewCell.xib */; };
+		DA0E089B23BF504C00C703E8 /* WSPOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E089A23BF504C00C703E8 /* WSPOverviewViewController.swift */; };
+		DA0E089E23BF757E00C703E8 /* WSPOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E089C23BF757E00C703E8 /* WSPOverviewTableViewCell.swift */; };
+		DA0E089F23BF757E00C703E8 /* WSPOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0E089D23BF757E00C703E8 /* WSPOverviewTableViewCell.xib */; };
+		DA294D5623A970AD00F19978 /* wsp.json in Resources */ = {isa = PBXBuildFile; fileRef = DA294D5523A970AD00F19978 /* wsp.json */; };
+		DA294D5923A9711A00F19978 /* FormModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA294D5823A9711A00F19978 /* FormModels.swift */; };
+		DA294D5B23A977FB00F19978 /* CamelCaseJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA294D5A23A977FB00F19978 /* CamelCaseJSONDecoder.swift */; };
+		DA326AA223B6A2F30089AEFD /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA326AA123B6A2F30089AEFD /* ButtonBarView.swift */; };
+		DA326AA523B6A3920089AEFD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA326AA423B6A3920089AEFD /* View.swift */; };
+		DA38894C23A2503000F22343 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38894B23A2503000F22343 /* CoreDataStack.swift */; };
+		DA3CB3CB23C14E3A00EEE8FA /* FormMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3C823C14E3A00EEE8FA /* FormMO+CoreDataProperties.swift */; };
+		DA3CB3CC23C14E3A00EEE8FA /* StepMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3C923C14E3A00EEE8FA /* StepMO+CoreDataProperties.swift */; };
+		DA3CB3CD23C14E3A00EEE8FA /* QuestionMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3CA23C14E3A00EEE8FA /* QuestionMO+CoreDataProperties.swift */; };
+		DA3CB3D123C14E9500EEE8FA /* StepMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3CE23C14E9500EEE8FA /* StepMO+CoreDataClass.swift */; };
+		DA3CB3D223C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3CF23C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift */; };
+		DA3CB3D323C14E9500EEE8FA /* FormMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3D023C14E9500EEE8FA /* FormMO+CoreDataClass.swift */; };
+		DA5F8F5223BF786F0085ADF9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F8F5123BF786F0085ADF9 /* Date.swift */; };
+		DAB9220B23A130AA0071563C /* WSP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAB9220923A130AA0071563C /* WSP.xcdatamodeld */; };
 		DABCEE71239E553A006416FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE70239E553A006416FB /* AppDelegate.swift */; };
 		DABCEE73239E553A006416FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE72239E553A006416FB /* SceneDelegate.swift */; };
 		DABCEE75239E553A006416FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE74239E553A006416FB /* ViewController.swift */; };
@@ -15,6 +34,7 @@
 		DABCEE7D239E553D006416FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABCEE7B239E553D006416FB /* LaunchScreen.storyboard */; };
 		DABCEE88239E553E006416FB /* LoggingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE87239E553E006416FB /* LoggingAppTests.swift */; };
 		DABCEE93239E553E006416FB /* LoggingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE92239E553E006416FB /* LoggingAppUITests.swift */; };
+		DAC9966C239FC8A6007B4688 /* WSPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9966B239FC8A6007B4688 /* WSPViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +55,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0530BE23B4C59D00F1BD84 /* WSPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSPTableViewCell.swift; sourceTree = "<group>"; };
+		DA0530BF23B4C59D00F1BD84 /* WSPTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WSPTableViewCell.xib; sourceTree = "<group>"; };
+		DA0E089A23BF504C00C703E8 /* WSPOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSPOverviewViewController.swift; sourceTree = "<group>"; };
+		DA0E089C23BF757E00C703E8 /* WSPOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSPOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		DA0E089D23BF757E00C703E8 /* WSPOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WSPOverviewTableViewCell.xib; sourceTree = "<group>"; };
+		DA294D5523A970AD00F19978 /* wsp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wsp.json; sourceTree = "<group>"; };
+		DA294D5823A9711A00F19978 /* FormModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModels.swift; sourceTree = "<group>"; };
+		DA294D5A23A977FB00F19978 /* CamelCaseJSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamelCaseJSONDecoder.swift; sourceTree = "<group>"; };
+		DA326AA123B6A2F30089AEFD /* ButtonBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
+		DA326AA423B6A3920089AEFD /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DA38894B23A2503000F22343 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DA38894D23A2504500F22343 /* LoggingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoggingApp.entitlements; sourceTree = "<group>"; };
+		DA3CB3C823C14E3A00EEE8FA /* FormMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DA3CB3C923C14E3A00EEE8FA /* StepMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StepMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DA3CB3CA23C14E3A00EEE8FA /* QuestionMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DA3CB3CE23C14E9500EEE8FA /* StepMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StepMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DA3CB3CF23C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuestionMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DA3CB3D023C14E9500EEE8FA /* FormMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DA5F8F5123BF786F0085ADF9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		DAB9220A23A130AA0071563C /* WSP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WSP.xcdatamodel; sourceTree = "<group>"; };
 		DABCEE6D239E553A006416FB /* LoggingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoggingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABCEE70239E553A006416FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DABCEE72239E553A006416FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +89,7 @@
 		DABCEE8E239E553E006416FB /* LoggingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABCEE92239E553E006416FB /* LoggingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingAppUITests.swift; sourceTree = "<group>"; };
 		DABCEE94239E553E006416FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC9966B239FC8A6007B4688 /* WSPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSPViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +117,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0530BB23B4C1D300F1BD84 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA0530BE23B4C59D00F1BD84 /* WSPTableViewCell.swift */,
+				DA0530BF23B4C59D00F1BD84 /* WSPTableViewCell.xib */,
+				DA0E089C23BF757E00C703E8 /* WSPOverviewTableViewCell.swift */,
+				DA0E089D23BF757E00C703E8 /* WSPOverviewTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DA294D5723A9710E00F19978 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA294D5823A9711A00F19978 /* FormModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA326A9F23B6A28E0089AEFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA326AA123B6A2F30089AEFD /* ButtonBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA326AA323B6A3830089AEFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA326AA423B6A3920089AEFD /* View.swift */,
+				DA5F8F5123BF786F0085ADF9 /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DABCEE64239E553A006416FB = {
 			isa = PBXGroup;
 			children = (
+				DA3CB3D023C14E9500EEE8FA /* FormMO+CoreDataClass.swift */,
+				DA3CB3CF23C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift */,
+				DA3CB3CE23C14E9500EEE8FA /* StepMO+CoreDataClass.swift */,
+				DA3CB3C823C14E3A00EEE8FA /* FormMO+CoreDataProperties.swift */,
+				DA3CB3C923C14E3A00EEE8FA /* StepMO+CoreDataProperties.swift */,
+				DA3CB3CA23C14E3A00EEE8FA /* QuestionMO+CoreDataProperties.swift */,
 				DABCEE6F239E553A006416FB /* LoggingApp */,
 				DABCEE86239E553E006416FB /* LoggingAppTests */,
 				DABCEE91239E553E006416FB /* LoggingAppUITests */,
@@ -99,7 +182,12 @@
 		DABCEE6F239E553A006416FB /* LoggingApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA326AA323B6A3830089AEFD /* Extensions */,
+				DA294D5723A9710E00F19978 /* Models */,
+				DA38894D23A2504500F22343 /* LoggingApp.entitlements */,
+				DAC9966A239FC82B007B4688 /* WSP */,
 				DABCEE70239E553A006416FB /* AppDelegate.swift */,
+				DA294D5A23A977FB00F19978 /* CamelCaseJSONDecoder.swift */,
 				DABCEE72239E553A006416FB /* SceneDelegate.swift */,
 				DABCEE74239E553A006416FB /* ViewController.swift */,
 				DABCEE76239E553A006416FB /* Main.storyboard */,
@@ -126,6 +214,20 @@
 				DABCEE94239E553E006416FB /* Info.plist */,
 			);
 			path = LoggingAppUITests;
+			sourceTree = "<group>";
+		};
+		DAC9966A239FC82B007B4688 /* WSP */ = {
+			isa = PBXGroup;
+			children = (
+				DA326A9F23B6A28E0089AEFD /* Views */,
+				DA0530BB23B4C1D300F1BD84 /* Cells */,
+				DA294D5523A970AD00F19978 /* wsp.json */,
+				DAB9220923A130AA0071563C /* WSP.xcdatamodeld */,
+				DAC9966B239FC8A6007B4688 /* WSPViewController.swift */,
+				DA0E089A23BF504C00C703E8 /* WSPOverviewViewController.swift */,
+				DA38894B23A2503000F22343 /* CoreDataStack.swift */,
+			);
+			path = WSP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +334,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0530C123B4C59D00F1BD84 /* WSPTableViewCell.xib in Resources */,
 				DABCEE7D239E553D006416FB /* LaunchScreen.storyboard in Resources */,
 				DABCEE7A239E553D006416FB /* Assets.xcassets in Resources */,
+				DA294D5623A970AD00F19978 /* wsp.json in Resources */,
 				DABCEE78239E553A006416FB /* Main.storyboard in Resources */,
+				DA0E089F23BF757E00C703E8 /* WSPOverviewTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +364,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0E089B23BF504C00C703E8 /* WSPOverviewViewController.swift in Sources */,
+				DA3CB3D323C14E9500EEE8FA /* FormMO+CoreDataClass.swift in Sources */,
+				DA3CB3CB23C14E3A00EEE8FA /* FormMO+CoreDataProperties.swift in Sources */,
+				DA326AA223B6A2F30089AEFD /* ButtonBarView.swift in Sources */,
+				DA3CB3D223C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift in Sources */,
 				DABCEE75239E553A006416FB /* ViewController.swift in Sources */,
 				DABCEE71239E553A006416FB /* AppDelegate.swift in Sources */,
 				DABCEE73239E553A006416FB /* SceneDelegate.swift in Sources */,
+				DA294D5B23A977FB00F19978 /* CamelCaseJSONDecoder.swift in Sources */,
+				DA294D5923A9711A00F19978 /* FormModels.swift in Sources */,
+				DA38894C23A2503000F22343 /* CoreDataStack.swift in Sources */,
+				DA0E089E23BF757E00C703E8 /* WSPOverviewTableViewCell.swift in Sources */,
+				DA5F8F5223BF786F0085ADF9 /* Date.swift in Sources */,
+				DA3CB3D123C14E9500EEE8FA /* StepMO+CoreDataClass.swift in Sources */,
+				DAC9966C239FC8A6007B4688 /* WSPViewController.swift in Sources */,
+				DAB9220B23A130AA0071563C /* WSP.xcdatamodeld in Sources */,
+				DA3CB3CC23C14E3A00EEE8FA /* StepMO+CoreDataProperties.swift in Sources */,
+				DA326AA523B6A3920089AEFD /* View.swift in Sources */,
+				DA3CB3CD23C14E3A00EEE8FA /* QuestionMO+CoreDataProperties.swift in Sources */,
+				DA0530C023B4C59D00F1BD84 /* WSPTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoggingApp/LoggingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U2CF25QL7;
 				INFOPLIST_FILE = LoggingApp/Info.plist;
@@ -452,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoggingApp/LoggingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U2CF25QL7;
 				INFOPLIST_FILE = LoggingApp/Info.plist;
@@ -590,6 +714,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DAB9220923A130AA0071563C /* WSP.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DAB9220A23A130AA0071563C /* WSP.xcdatamodel */,
+			);
+			currentVersion = DAB9220A23A130AA0071563C /* WSP.xcdatamodel */;
+			path = WSP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DABCEE65239E553A006416FB /* Project object */;
 }

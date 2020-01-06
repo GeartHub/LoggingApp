@@ -1,0 +1,71 @@
+{
+  "steps": [
+    {
+      "title": "Opdracht aanvaarden",
+      "questionTitles": [
+        "Snap je de opdracht cq. klacht?",
+        "Heb je nog vragen?"
+      ]
+    },
+    {
+      "title": "Voorbereiding",
+      "questionTitles": [
+        "Persoonlijk beschermingsmiddelen",
+        "Awareness of the Human Factors",
+        "Afspraken maken/taken verdelen",
+        "Support equipment nodig",
+        "Tooling verzamelen",
+        "Special tooling nodig",
+        "Maintenance manuals aanwezig",
+        "Bewustheid van de werkbank discipline"
+      ]
+    },
+    {
+      "title": "Uitvoering",
+      "questionTitles": [
+        "Safe for maintenance (Deltion form)",
+        "Safe for entry (AMM type)",
+        "Safe for electric power (AMM type)",
+        "Safe for hydraulic power (AMM type)",
+        "Is afwijken van procedure AMM nodig",
+        "Worden er andere opdrachten uitgevoerd die mijn werkzaamheden kunnen verstoren",
+        "Mogelijkheid netjes en ordelijk te werken"
+      ]
+    },
+    {
+      "title": "Administratie",
+      "questionTitles": [
+        "Checklist Safe for Maintenance",
+        "Worksheet",
+        "Aircraft technical Log",
+        "Form one",
+        "Additional worksheet",
+        "Red Tag",
+        "Temporary Removal Tag",
+        "Danger Tag",
+        "Circuit breaker Tag"
+      ]
+    },
+    {
+      "title": "Controle",
+      "questionTitles": [
+        "Werkzaamheden gecontroleerd ",
+        "Follow on maintenance noodzakelijk ",
+        "Gecontroleerd op FOD",
+        "Tool control uitgevoerd ",
+        "Administratie op juistheid gecontroleerd"
+      ]
+    },
+    {
+      "title": "Opruimen/schoonmaken",
+      "questionTitles": [
+        "Tools en equipment schoongemaakt ",
+        "Werkplek schoongemaakt  ",
+        "Aircraft technical Log ",
+        "Support equipment op zijn plaats gezet ",
+        "Maintenance manuals in de kast gezet ",
+        "Tools ingeleverd"
+      ]
+    }
+  ]
+}
