@@ -94,10 +94,17 @@ class CoreDataStack {
     func fetchForms(){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Form")
         let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
+        
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         do {
             self.fetchedWSPs = try managedObjectContext.fetch(fetchRequest) as! [FormMO]
+        } catch {
+            print(error)
+        }
+        
+        do {
+            let result = try self.managedObjectContext.fetch(fetchRequest)
         } catch {
             print(error)
         }

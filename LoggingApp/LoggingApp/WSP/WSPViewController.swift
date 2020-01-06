@@ -16,6 +16,7 @@ class WSPViewController: UIViewController {
     var answeredQuestions = [QuestionMO]()
     var numberOfQuestionsInStep = 0
     var currentStepNumber = 0
+    var currentQuestionNumber = 0
     
     var logbookItem: FormMO?
     let context = CoreDataStack.instance.managedObjectContext
@@ -65,10 +66,10 @@ class WSPViewController: UIViewController {
         //            }
         //        }
         
-        getQuestions { (success, forms, error) in
+        getQuestions { (success, localForm, cdForm, error) in
             if error == nil {
-                guard let forms = forms else { return }
-                self.localStepsArray = forms.steps
+                guard let localForm = localForm else { return }
+                self.localStepsArray = localForm.steps
                 self.setupForm()
             }
         }
@@ -83,6 +84,7 @@ class WSPViewController: UIViewController {
             let question = QuestionMO(context: context)
             
             question.title = questionTitle
+            question.order = Int32(currentQuestionNumber)
             
             questionArray.append(question)
         }
@@ -114,7 +116,7 @@ class WSPViewController: UIViewController {
                                      backAndForwardBar.heightAnchor.constraint(equalToConstant: 80)])
     }
     
-    internal func getQuestions(completion: @escaping (Bool, Forms?, Error?) -> Void) {
+    internal func getQuestions(completion: @escaping (Bool, Forms?, FormMO?, Error?) -> Void) {
         
         
         if isNewLogbookItem {
@@ -123,19 +125,16 @@ class WSPViewController: UIViewController {
                     let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                     let form = try? JSONDecoder.camelCaseJSONDecoder.decode(Forms.self, from: jsonData)
                     if let form = form {
-                        completion(true, form, nil)
+                        completion(true, form, nil, nil)
                     }
                     
                 } catch {
-                    completion(false, nil, error)
+                    completion(false, nil, nil, error)
                 }
             }
         } else {
-            print(logbookItem?.step)
-            if let steps = logbookItem?.step {
-                for step in steps {
-                    
-                }
+            if let steps = logbookItem?.stepsArray {
+                print(steps[currentStepNumber].questionsArray[0].title)
             }
         }
     }
@@ -187,6 +186,7 @@ extension WSPViewController: WSPTableViewCellDelegate {
     func saveQuestions(ofThis _currentStepNumber: Int, _ _questionArray: [QuestionMO]) {
         let stepInLogbook = StepMO(context: context)
         stepInLogbook.title = localStepsArray[_currentStepNumber].title
+        stepInLogbook.order = Int32(_currentStepNumber)
         
         for question in _questionArray {
             question.addToStep(stepInLogbook)
@@ -194,8 +194,6 @@ extension WSPViewController: WSPTableViewCellDelegate {
         
         guard let logbookItem = logbookItem else { return }
         stepInLogbook.addToForm(logbookItem)
-        
-
     }
 }
 
@@ -216,9 +214,5 @@ extension WSPViewController: ButtonBarViewDelegate {
     }
     
     func previousButtonTapped(_ button: UIButton) {
-        if currentStepNumber > 0 {
-            self.currentStepNumber -= 1
-            setupForm()
-        }
     }
 }

@@ -3,22 +3,24 @@
     <entity name="Form" representedClassName="FormMO" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="step" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Step" inverseName="form" inverseEntity="Step"/>
+        <relationship name="steps" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Step" inverseName="form" inverseEntity="Step"/>
     </entity>
     <entity name="Question" representedClassName="QuestionMO" syncable="YES">
         <attribute name="options" optional="YES" attributeType="Boolean"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="particularities" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="step" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Step" inverseName="question" inverseEntity="Step"/>
+        <relationship name="step" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Step" inverseName="questions" inverseEntity="Step"/>
     </entity>
     <entity name="Step" representedClassName="StepMO" syncable="YES">
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="form" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Form" inverseName="step" inverseEntity="Form"/>
-        <relationship name="question" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="step" inverseEntity="Question"/>
+        <relationship name="form" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Form" inverseName="steps" inverseEntity="Form"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="step" inverseEntity="Question"/>
     </entity>
     <elements>
         <element name="Form" positionX="659.6328125" positionY="-146.609375" width="128" height="88"/>
-        <element name="Question" positionX="155.55859375" positionY="-183.5" width="128" height="103"/>
-        <element name="Step" positionX="401.66015625" positionY="-161.2734375" width="128" height="88"/>
+        <element name="Question" positionX="155.55859375" positionY="-183.5" width="128" height="118"/>
+        <element name="Step" positionX="401.66015625" positionY="-161.2734375" width="128" height="103"/>
     </elements>
 </model>
