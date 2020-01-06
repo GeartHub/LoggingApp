@@ -20,8 +20,8 @@ extension QuestionMO {
     @NSManaged public var options: Bool
     @NSManaged public var particularities: String?
     @NSManaged public var title: String?
-    @NSManaged public var order: Int16
-    @NSManaged public var step: NSSet?
+    @NSManaged public var order: Int32
+    @NSManaged public var step: Set<StepMO>?
 
 }
 

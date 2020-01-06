@@ -19,9 +19,16 @@ extension StepMO {
 
     @NSManaged public var title: String?
     @NSManaged public var order: Int32
-    @NSManaged public var form: NSSet?
-    @NSManaged public var questions: NSSet?
-
+    @NSManaged public var form: Set<FormMO>?
+    @NSManaged public var questions: Set<QuestionMO>?
+   
+    public var questionsArray: [QuestionMO] {
+        let set = questions ?? []
+        return set.sorted {
+            $0.order < $1.order
+        }
+    }
+    
 }
 
 // MARK: Generated accessors for form

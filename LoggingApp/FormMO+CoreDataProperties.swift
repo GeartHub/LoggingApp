@@ -19,8 +19,14 @@ extension FormMO {
 
     @NSManaged public var createdAt: Date?
     @NSManaged public var title: String?
-    @NSManaged public var steps: NSSet?
-
+    @NSManaged public var steps: Set<StepMO>?
+    
+    public var stepsArray: [StepMO] {
+        let set = steps ?? []
+        return set.sorted {
+            $0.order < $1.order
+        }
+    }
 }
 
 // MARK: Generated accessors for steps
