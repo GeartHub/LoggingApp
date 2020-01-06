@@ -2,7 +2,7 @@
 //  QuestionMO+CoreDataProperties.swift
 //  LoggingApp
 //
-//  Created by Geart Otten on 04/01/2020.
+//  Created by Geart Otten on 06/01/2020.
 //  Copyright © 2020 Geart Otten. All rights reserved.
 //
 //
@@ -20,7 +20,8 @@ extension QuestionMO {
     @NSManaged public var options: Bool
     @NSManaged public var particularities: String?
     @NSManaged public var title: String?
-    @NSManaged public var step: Set<StepMO>?
+    @NSManaged public var order: Int16
+    @NSManaged public var step: NSSet?
 
 }
 

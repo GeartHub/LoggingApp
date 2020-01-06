@@ -2,7 +2,7 @@
 //  FormMO+CoreDataProperties.swift
 //  LoggingApp
 //
-//  Created by Geart Otten on 04/01/2020.
+//  Created by Geart Otten on 06/01/2020.
 //  Copyright © 2020 Geart Otten. All rights reserved.
 //
 //
@@ -19,23 +19,23 @@ extension FormMO {
 
     @NSManaged public var createdAt: Date?
     @NSManaged public var title: String?
-    @NSManaged public var step: Set<StepMO>?
+    @NSManaged public var steps: NSSet?
 
 }
 
-// MARK: Generated accessors for step
+// MARK: Generated accessors for steps
 extension FormMO {
 
-    @objc(addStepObject:)
-    @NSManaged public func addToStep(_ value: StepMO)
+    @objc(addStepsObject:)
+    @NSManaged public func addToSteps(_ value: StepMO)
 
-    @objc(removeStepObject:)
-    @NSManaged public func removeFromStep(_ value: StepMO)
+    @objc(removeStepsObject:)
+    @NSManaged public func removeFromSteps(_ value: StepMO)
 
-    @objc(addStep:)
-    @NSManaged public func addToStep(_ values: NSSet)
+    @objc(addSteps:)
+    @NSManaged public func addToSteps(_ values: NSSet)
 
-    @objc(removeStep:)
-    @NSManaged public func removeFromStep(_ values: NSSet)
+    @objc(removeSteps:)
+    @NSManaged public func removeFromSteps(_ values: NSSet)
 
 }

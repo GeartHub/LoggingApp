@@ -2,7 +2,7 @@
 //  StepMO+CoreDataProperties.swift
 //  LoggingApp
 //
-//  Created by Geart Otten on 04/01/2020.
+//  Created by Geart Otten on 06/01/2020.
 //  Copyright © 2020 Geart Otten. All rights reserved.
 //
 //
@@ -18,8 +18,9 @@ extension StepMO {
     }
 
     @NSManaged public var title: String?
-    @NSManaged public var form: Set<FormMO>?
-    @NSManaged public var question: Set<QuestionMO>?
+    @NSManaged public var order: Int32
+    @NSManaged public var form: NSSet?
+    @NSManaged public var questions: NSSet?
 
 }
 
@@ -40,19 +41,19 @@ extension StepMO {
 
 }
 
-// MARK: Generated accessors for question
+// MARK: Generated accessors for questions
 extension StepMO {
 
-    @objc(addQuestionObject:)
-    @NSManaged public func addToQuestion(_ value: QuestionMO)
+    @objc(addQuestionsObject:)
+    @NSManaged public func addToQuestions(_ value: QuestionMO)
 
-    @objc(removeQuestionObject:)
-    @NSManaged public func removeFromQuestion(_ value: QuestionMO)
+    @objc(removeQuestionsObject:)
+    @NSManaged public func removeFromQuestions(_ value: QuestionMO)
 
-    @objc(addQuestion:)
-    @NSManaged public func addToQuestion(_ values: NSSet)
+    @objc(addQuestions:)
+    @NSManaged public func addToQuestions(_ values: NSSet)
 
-    @objc(removeQuestion:)
-    @NSManaged public func removeFromQuestion(_ values: NSSet)
+    @objc(removeQuestions:)
+    @NSManaged public func removeFromQuestions(_ values: NSSet)
 
 }
