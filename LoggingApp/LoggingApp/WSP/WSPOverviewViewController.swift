@@ -65,7 +65,7 @@ extension WSPOverviewViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WSPOverviewCell", for: indexPath) as! WSPOverviewTableViewCell
         cell.titleLabel.text = "dikke niks"
-        cell.createAtLabel.text = CoreDataStack.instance.fetchedWSPs[indexPath.row].createdAt?.toString(dateFormat: "dd-MM-yyyy")
+        cell.createAtLabel.text = CoreDataStack.instance.fetchedWSPs[indexPath.row].createdAt?.toString(dateFormat: "HH:MM dd-MM-yyyy")
         return cell
     }
     
