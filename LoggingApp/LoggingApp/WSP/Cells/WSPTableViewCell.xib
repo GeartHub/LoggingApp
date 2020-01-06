@@ -17,7 +17,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKr-pe-1ie">
-                        <rect key="frame" x="502" y="36" width="36" height="32"/>
+                        <rect key="frame" x="502" y="36" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="HBU-oE-arh"/>
+                            <constraint firstAttribute="height" constant="36" id="nGw-3B-R5l"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="tintColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" image="checkmark.circle.fill" catalog="system">
@@ -30,7 +34,11 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJH-dD-mAk">
-                        <rect key="frame" x="561" y="36" width="36" height="32"/>
+                        <rect key="frame" x="561" y="36" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="9rW-UU-ji3"/>
+                            <constraint firstAttribute="width" constant="36" id="wJc-96-dIJ"/>
+                        </constraints>
                         <color key="tintColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" image="minus.circle.fill" catalog="system">
                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,10 +63,9 @@
                     <constraint firstItem="mJH-dD-mAk" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-25" id="DjU-AC-8vo"/>
                     <constraint firstItem="8TP-Uu-bPS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="30" id="Z0d-p3-2iS"/>
                     <constraint firstItem="mJH-dD-mAk" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-15" id="cBS-KQ-04A"/>
-                    <constraint firstItem="8TP-Uu-bPS" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-150" id="gBn-L7-AZS"/>
+                    <constraint firstItem="8TP-Uu-bPS" firstAttribute="trailing" secondItem="GKr-pe-1ie" secondAttribute="leading" constant="-25" id="gBn-L7-AZS"/>
                     <constraint firstItem="mJH-dD-mAk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="25" id="jGL-Cc-zf4"/>
                     <constraint firstItem="GKr-pe-1ie" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="25" id="jwr-Yb-hTf"/>
-                    <constraint firstItem="GKr-pe-1ie" firstAttribute="top" secondItem="mJH-dD-mAk" secondAttribute="top" id="nq8-Zl-TIQ"/>
                     <constraint firstItem="GKr-pe-1ie" firstAttribute="centerY" secondItem="mJH-dD-mAk" secondAttribute="centerY" id="oKJ-gT-JEO"/>
                     <constraint firstItem="8TP-Uu-bPS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="vxF-Jd-Z2U"/>
                     <constraint firstItem="mJH-dD-mAk" firstAttribute="leading" secondItem="GKr-pe-1ie" secondAttribute="trailing" constant="23" id="w4Z-i9-xHD"/>
