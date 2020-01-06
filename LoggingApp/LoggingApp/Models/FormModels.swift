@@ -24,10 +24,12 @@ enum FormType {
 
 class FormTemplate {
     private var isMadeInCoreData = false
-    private var type: FormType?
     var form: FormMO?
+    let context = CoreDataStack.instance.managedObjectContext
+    var type: FormType?
     
     init(formType: FormType, form: FormMO? = nil) {
+        print(formType)
         self.type = formType
         switch formType {
         case .new:
@@ -40,12 +42,27 @@ class FormTemplate {
     
     
     private func generateForm() {
+        let newForm = FormMO(context: context)
+        newForm.createdAt = Date()
+        
         if let path = Bundle.main.path(forResource: "wsp", ofType: "json") {
             do {
                 let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let form = try? JSONDecoder.camelCaseJSONDecoder.decode(Forms.self, from: jsonData)
                 if let form = form {
-                    
+                    for (numberOfStep, step) in form.steps.enumerated() {
+                        let stepInLogbookItem = StepMO(context: context)
+                        stepInLogbookItem.title = step.title
+                        stepInLogbookItem.order = Int32(numberOfStep)
+                        for (numberOfQuestion, question) in step.questionTitles.enumerated() {
+                            let questionInStep = QuestionMO(context: context)
+                            questionInStep.order = Int32(numberOfQuestion)
+                            questionInStep.title = question
+                            questionInStep.addToStep(stepInLogbookItem)
+                        }
+                        stepInLogbookItem.addToForm(newForm)
+                    }
+                    self.form = newForm
                 }
                 
             } catch {

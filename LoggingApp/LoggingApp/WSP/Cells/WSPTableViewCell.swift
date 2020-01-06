@@ -18,10 +18,26 @@ class WSPTableViewCell: UITableViewCell {
     @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
+    
+    var newQuestion: Bool = true
+    var state: FormType = .answered
     var delegate: WSPTableViewCellDelegate?
     var question: QuestionMO? {
         didSet {
             self.questionTitleLabel.text = question?.title
+            switch state {
+            case .answered:
+                guard let answer = question?.options else { return }
+                switch answer {
+                case true:
+                    yesButton.tintColor = .systemBlue
+                case false:
+                    noButton.tintColor = .systemRed
+                }
+                print(answer.hashValue)
+            case .new:
+                break
+            }
         }
     }
     
