@@ -103,12 +103,6 @@ class CoreDataStack {
             print(error)
         }
         
-        do {
-            let result = try self.managedObjectContext.fetch(fetchRequest)
-        } catch {
-            print(error)
-        }
-        
     }
     func fetchSteps(){
         

@@ -10,10 +10,6 @@ import UIKit
 
 class WSPViewController: UIViewController {
     
-    var localStepsArray = [Step]()
-    var cdStepsArray = [StepMO]()
-    var questionArray = [QuestionMO]()
-    var answeredQuestions = [QuestionMO]()
     var numberOfQuestionsInStep = 0
     var currentStepNumber = 0
     var currentQuestionNumber = 0
@@ -21,6 +17,7 @@ class WSPViewController: UIViewController {
     var logbookItem: FormMO?
     let context = CoreDataStack.instance.managedObjectContext
     var isNewLogbookItem: Bool = true
+    var formTemplate: FormTemplate?
     @IBOutlet weak var wspTitleLabel: UILabel!
     
     private lazy var questionsView : UITableView = {
@@ -48,59 +45,29 @@ class WSPViewController: UIViewController {
         questionsView.register(UINib(nibName: "WSPTableViewCell", bundle: nil), forCellReuseIdentifier: "WSPCell")
         setupConstraints()
         
-        if isNewLogbookItem {
-            logbookItem = FormMO(context: context)
-            logbookItem?.createdAt = Date()
+        if logbookItem != nil {
+            formTemplate = FormTemplate(formType: .answered, form: logbookItem)
+        } else {
+            formTemplate = FormTemplate.init(formType: .new)
         }
         
-        
-        
-        //        CoreDataStack.instance.fetchForms()
-        //        let WSPs = CoreDataStack.instance.fetchedWSPs
-        //
-        //        self.getSteps(basedOn: WSPs) { (success, stepArray, error) in
-        //            if error == nil {
-        //                if let question = stepArray?[0].question {
-        //                    let test = question.map({$0}) as! [QuestionMO]
-        //                    debugPrint(test.first?.particularities)
-        //                }
-        //            }
-        //        }
-        
-        getQuestions { (success, localForm, cdForm, error) in
-            if error == nil {
-                guard let localForm = localForm else { return }
-                self.localStepsArray = localForm.steps
-                self.setupForm()
-            }
-        }
-        
-        
+        setupForm()
         // Do any additional setup after loading the view.
     }
     
     func setupForm () {
-        
-        for questionTitle in localStepsArray[self.currentStepNumber].questionTitles {
-            let question = QuestionMO(context: context)
-            
-            question.title = questionTitle
-            question.order = Int32(currentQuestionNumber)
-            
-            questionArray.append(question)
-        }
         
         if currentStepNumber == 0 {
             backAndForwardBar.previousButton.isEnabled = false
         } else {
             backAndForwardBar.previousButton.isEnabled = true
         }
-        if currentStepNumber == localStepsArray.count-1 {
+        guard let form = formTemplate?.form else { return }
+        if currentStepNumber == form.stepsArray.count-1{
             let config = UIImage.SymbolConfiguration(pointSize: 40, weight: .light, scale: .large)
             let previousArrow = UIImage(systemName: "arrow.left.circle.fill", withConfiguration: config)
             backAndForwardBar.nextButton.setImage(previousArrow, for: .normal)
         }
-        self.numberOfQuestionsInStep = localStepsArray[self.currentStepNumber].questionTitles.count
         self.questionsView.reloadData()
     }
     
@@ -116,38 +83,11 @@ class WSPViewController: UIViewController {
                                      backAndForwardBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
                                      backAndForwardBar.heightAnchor.constraint(equalToConstant: 80)])
     }
-    
-    internal func getQuestions(completion: @escaping (Bool, Forms?, FormMO?, Error?) -> Void) {
-        
-        
-        if isNewLogbookItem {
-            if let path = Bundle.main.path(forResource: "wsp", ofType: "json") {
-                do {
-                    let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                    let form = try? JSONDecoder.camelCaseJSONDecoder.decode(Forms.self, from: jsonData)
-                    if let form = form {
-                        completion(true, form, nil, nil)
-                    }
-                    
-                } catch {
-                    completion(false, nil, nil, error)
-                }
-            }
-        } else {
-            if let steps = logbookItem?.stepsArray {
-                print(steps[currentStepNumber].questionsArray[0].title)
-            }
-        }
-    }
-}
-
-extension WSPViewController {
-    
 }
 
 extension WSPViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfQuestionsInStep
+        return formTemplate?.form?.stepsArray[currentStepNumber].questionsArray.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -157,7 +97,9 @@ extension WSPViewController: UITableViewDataSource, UITableViewDelegate {
         cell.yesButton.tintColor = .systemGray
         cell.noButton.tintColor = .systemGray
         
-        cell.question = questionArray[indexPath.row]
+        cell.state = formTemplate?.type ?? .answered
+        
+        cell.question = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexPath.row]
         return cell
     }
     
@@ -171,44 +113,28 @@ extension WSPViewController: WSPTableViewCellDelegate {
         button.tintColor = .systemBlue
         
         guard let questionFromCell = cell.question else { return }
-        if let indexOfQuestion = questionArray.firstIndex(of: questionFromCell) {
-            questionArray[indexOfQuestion] = questionFromCell
+        if let indexOfQuestion = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray.firstIndex(of: questionFromCell) {
+            formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexOfQuestion].options = questionFromCell.options
         }
     }
     
     func noButtonTapped(_ button: UIButton, _ cell: WSPTableViewCell) {
         button.tintColor = .systemRed
         guard let questionFromCell = cell.question else { return }
-        if let indexOfQuestion = questionArray.firstIndex(of: questionFromCell) {
-            questionArray[indexOfQuestion] = questionFromCell
+        if let indexOfQuestion = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray.firstIndex(of: questionFromCell) {
+            formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexOfQuestion].options = questionFromCell.options
         }
-    }
-    
-    func saveQuestions(ofThis _currentStepNumber: Int, _ _questionArray: [QuestionMO]) {
-        let stepInLogbook = StepMO(context: context)
-        stepInLogbook.title = localStepsArray[_currentStepNumber].title
-        stepInLogbook.order = Int32(_currentStepNumber)
-        
-        for question in _questionArray {
-            question.addToStep(stepInLogbook)
-        }
-        
-        guard let logbookItem = logbookItem else { return }
-        stepInLogbook.addToForm(logbookItem)
     }
 }
 
 extension WSPViewController: ButtonBarViewDelegate {
     func nextButtonTapped(_ button: UIButton) {
         
-        saveQuestions(ofThis: self.currentStepNumber, questionArray)
-        
         self.currentStepNumber += 1
-        if currentStepNumber < localStepsArray.count {
-            questionArray = []
+        if currentStepNumber < formTemplate?.form?.stepsArray.count ?? 0 {
             setupForm()
         }
-        if currentStepNumber == localStepsArray.count {
+        if currentStepNumber == formTemplate?.form?.stepsArray.count ?? 0 {
             CoreDataStack.instance.saveContext()
             navigationController?.popToRootViewController(animated: true)
         }
