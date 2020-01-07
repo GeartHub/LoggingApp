@@ -14,6 +14,7 @@ class WSPOverviewViewController: UIViewController {
         var tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         return tableView

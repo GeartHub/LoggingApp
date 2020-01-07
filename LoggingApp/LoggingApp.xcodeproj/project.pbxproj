@@ -24,6 +24,8 @@
 		DA3CB3D123C14E9500EEE8FA /* StepMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3CE23C14E9500EEE8FA /* StepMO+CoreDataClass.swift */; };
 		DA3CB3D223C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3CF23C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift */; };
 		DA3CB3D323C14E9500EEE8FA /* FormMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB3D023C14E9500EEE8FA /* FormMO+CoreDataClass.swift */; };
+		DA4A435623C4B7CA008B3E73 /* Aircraft+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A435423C4B7CA008B3E73 /* Aircraft+CoreDataClass.swift */; };
+		DA4A435723C4B7CA008B3E73 /* Aircraft+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A435523C4B7CA008B3E73 /* Aircraft+CoreDataProperties.swift */; };
 		DA5F8F5223BF786F0085ADF9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F8F5123BF786F0085ADF9 /* Date.swift */; };
 		DAB9220B23A130AA0071563C /* WSP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAB9220923A130AA0071563C /* WSP.xcdatamodeld */; };
 		DABCEE71239E553A006416FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE70239E553A006416FB /* AppDelegate.swift */; };
@@ -73,6 +75,8 @@
 		DA3CB3CE23C14E9500EEE8FA /* StepMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StepMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA3CB3CF23C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuestionMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA3CB3D023C14E9500EEE8FA /* FormMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DA4A435423C4B7CA008B3E73 /* Aircraft+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aircraft+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DA4A435523C4B7CA008B3E73 /* Aircraft+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aircraft+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA5F8F5123BF786F0085ADF9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		DAB9220A23A130AA0071563C /* WSP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WSP.xcdatamodel; sourceTree = "<group>"; };
 		DABCEE6D239E553A006416FB /* LoggingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoggingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +160,8 @@
 		DABCEE64239E553A006416FB = {
 			isa = PBXGroup;
 			children = (
+				DA4A435423C4B7CA008B3E73 /* Aircraft+CoreDataClass.swift */,
+				DA4A435523C4B7CA008B3E73 /* Aircraft+CoreDataProperties.swift */,
 				DA3CB3D023C14E9500EEE8FA /* FormMO+CoreDataClass.swift */,
 				DA3CB3CF23C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift */,
 				DA3CB3CE23C14E9500EEE8FA /* StepMO+CoreDataClass.swift */,
@@ -369,6 +375,7 @@
 				DA3CB3CB23C14E3A00EEE8FA /* FormMO+CoreDataProperties.swift in Sources */,
 				DA326AA223B6A2F30089AEFD /* ButtonBarView.swift in Sources */,
 				DA3CB3D223C14E9500EEE8FA /* QuestionMO+CoreDataClass.swift in Sources */,
+				DA4A435623C4B7CA008B3E73 /* Aircraft+CoreDataClass.swift in Sources */,
 				DABCEE75239E553A006416FB /* ViewController.swift in Sources */,
 				DABCEE71239E553A006416FB /* AppDelegate.swift in Sources */,
 				DABCEE73239E553A006416FB /* SceneDelegate.swift in Sources */,
@@ -384,6 +391,7 @@
 				DA326AA523B6A3920089AEFD /* View.swift in Sources */,
 				DA3CB3CD23C14E3A00EEE8FA /* QuestionMO+CoreDataProperties.swift in Sources */,
 				DA0530C023B4C59D00F1BD84 /* WSPTableViewCell.swift in Sources */,
+				DA4A435723C4B7CA008B3E73 /* Aircraft+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  FormMO+CoreDataProperties.swift
 //  LoggingApp
 //
-//  Created by Geart Otten on 06/01/2020.
+//  Created by Geart Otten on 07/01/2020.
 //  Copyright © 2020 Geart Otten. All rights reserved.
 //
 //
@@ -20,7 +20,7 @@ extension FormMO {
     @NSManaged public var createdAt: Date?
     @NSManaged public var title: String?
     @NSManaged public var steps: Set<StepMO>?
-    
+    @NSManaged public var aircraft: Aircraft?
     public var stepsArray: [StepMO] {
         let set = steps ?? []
         return set.sorted {

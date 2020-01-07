@@ -13,9 +13,6 @@ class CoreDataStack {
     static let instance = CoreDataStack()
     
     lazy var applicationDocumentsDirectory: URL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.dirksierd.CoreDataTest" in the application's documents Application Support directory.
-        //        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        //NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.mycontainer"];
         
         let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.go.loggingapp")
         

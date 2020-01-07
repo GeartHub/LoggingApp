@@ -2,7 +2,7 @@
 //  StepMO+CoreDataProperties.swift
 //  LoggingApp
 //
-//  Created by Geart Otten on 06/01/2020.
+//  Created by Geart Otten on 07/01/2020.
 //  Copyright © 2020 Geart Otten. All rights reserved.
 //
 //

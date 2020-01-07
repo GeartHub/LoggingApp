@@ -34,7 +34,6 @@ class WSPTableViewCell: UITableViewCell {
                 case false:
                     noButton.tintColor = .systemRed
                 }
-                print(answer.hashValue)
             case .new:
                 break
             }
