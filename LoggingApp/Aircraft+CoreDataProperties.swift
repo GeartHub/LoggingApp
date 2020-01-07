@@ -11,20 +11,25 @@ import Foundation
 import CoreData
 
 
-extension Aircraft {
+extension AircraftMO {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Aircraft> {
-        return NSFetchRequest<Aircraft>(entityName: "Aircraft")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<AircraftMO> {
+        return NSFetchRequest<AircraftMO>(entityName: "Aircraft")
     }
 
     @NSManaged public var type: String?
     @NSManaged public var serialnumber: String?
     @NSManaged public var forms: Set<FormMO>?
-
+    public var formsArray: [FormMO] {
+        let set = forms ?? []
+        return set.sorted {
+            $0.createdAt! > $1.createdAt!
+        }
+    }
 }
 
 // MARK: Generated accessors for forms
-extension Aircraft {
+extension AircraftMO {
 
     @objc(addFormsObject:)
     @NSManaged public func addToForms(_ value: FormMO)

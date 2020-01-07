@@ -14,9 +14,9 @@ class WSPViewController: UIViewController {
     var currentStepNumber = 0
     var currentQuestionNumber = 0
     
+    var aircraft: AircraftMO?
     var logbookItem: FormMO?
     let context = CoreDataStack.instance.managedObjectContext
-    var isNewLogbookItem: Bool = true
     var formTemplate: FormTemplate?
     @IBOutlet weak var wspTitleLabel: UILabel!
     
@@ -136,7 +136,11 @@ extension WSPViewController: ButtonBarViewDelegate {
             setupForm()
         }
         if currentStepNumber == formTemplate?.form?.stepsArray.count ?? 0 {
-            CoreDataStack.instance.saveContext()
+            if formTemplate?.type == .new {
+                guard let aircraft = self.aircraft else { return }
+                formTemplate?.form?.addToAircraft(aircraft)
+                CoreDataStack.instance.saveContext()
+            }
             navigationController?.popToRootViewController(animated: true)
         }
     }

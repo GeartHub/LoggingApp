@@ -20,13 +20,30 @@ extension FormMO {
     @NSManaged public var createdAt: Date?
     @NSManaged public var title: String?
     @NSManaged public var steps: Set<StepMO>?
-    @NSManaged public var aircraft: Aircraft?
+    @NSManaged public var aircraft: Set<AircraftMO>?
     public var stepsArray: [StepMO] {
         let set = steps ?? []
         return set.sorted {
             $0.order < $1.order
         }
     }
+}
+
+// MARK: Generated accessors for aircraft
+extension FormMO {
+
+    @objc(addAircraftObject:)
+    @NSManaged public func addToAircraft(_ value: AircraftMO)
+
+    @objc(removeAircraftObject:)
+    @NSManaged public func removeFromAircraft(_ value: AircraftMO)
+
+    @objc(addAircraft:)
+    @NSManaged public func addToAircraft(_ values: NSSet)
+
+    @objc(removeAircraft:)
+    @NSManaged public func removeFromAircraft(_ values: NSSet)
+
 }
 
 // MARK: Generated accessors for steps

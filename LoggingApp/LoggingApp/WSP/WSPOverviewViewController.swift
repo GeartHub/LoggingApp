@@ -10,6 +10,7 @@ import UIKit
 
 class WSPOverviewViewController: UIViewController {
     
+    var aircraft: AircraftMO?
     private lazy var tableView : UITableView = {
         var tableView = UITableView()
         tableView.dataSource = self
@@ -23,7 +24,6 @@ class WSPOverviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        CoreDataStack.instance.fetchForms()
         tableView.register(UINib(nibName: "WSPOverviewTableViewCell", bundle: nil), forCellReuseIdentifier: "WSPOverviewCell")
         
         view.addSubview(tableView)
@@ -52,7 +52,6 @@ class WSPOverviewViewController: UIViewController {
         if segue.identifier == "formSelectedSegue", let destination = segue.destination as? WSPViewController {
             let form = sender as! FormMO
             destination.logbookItem = form
-            destination.isNewLogbookItem = false
         }
     }
 
@@ -60,18 +59,18 @@ class WSPOverviewViewController: UIViewController {
 
 extension WSPOverviewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        CoreDataStack.instance.fetchedWSPs.count
+        aircraft?.formsArray.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WSPOverviewCell", for: indexPath) as! WSPOverviewTableViewCell
         cell.titleLabel.text = "dikke niks"
-        cell.createAtLabel.text = CoreDataStack.instance.fetchedWSPs[indexPath.row].createdAt?.toString(dateFormat: "HH:MM dd-MM-yyyy")
+        cell.createAtLabel.text = aircraft?.formsArray[indexPath.row].createdAt?.toString(dateFormat: "HH:MM dd-MM-yyyy")
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedForm = CoreDataStack.instance.fetchedWSPs[indexPath.row]
+        let selectedForm = aircraft?.formsArray[indexPath.row]
         performSegue(withIdentifier: "formSelectedSegue", sender: selectedForm)
     }
     

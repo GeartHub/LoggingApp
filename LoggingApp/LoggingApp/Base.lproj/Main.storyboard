@@ -16,12 +16,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Rnz-V2-KkB"/>
+                        <segue destination="PDz-cZ-y1y" kind="relationship" relationship="rootViewController" id="udA-Mq-HeJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1s0-2X-893" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-680" y="138"/>
+        </scene>
+        <!--Airship Overview View Controller-->
+        <scene sceneID="CFp-a0-f3g">
+            <objects>
+                <viewController id="PDz-cZ-y1y" customClass="AirshipOverviewViewController" customModule="LoggingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JG4-St-kfw">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ADJ-de-xYG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8lG-s9-e01"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SelectedAircraft" id="quc-KN-CtU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8H-OK-u6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -41,7 +60,7 @@
                                     <color key="titleColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="M6S-aV-hqi" kind="show" id="d0W-3M-mGB"/>
+                                    <segue destination="M6S-aV-hqi" kind="show" identifier="CreateNewWSPSegue" id="d0W-3M-mGB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-Dk-58c">
@@ -53,7 +72,7 @@
                                     <color key="titleColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VZV-OF-Q11" kind="show" id="mx3-8E-SfH"/>
+                                    <segue destination="VZV-OF-Q11" kind="show" identifier="ShowWSPSegue" id="mx3-8E-SfH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.84892086330936" y="137.68844221105527"/>
+            <point key="canvasLocation" x="834" y="138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rwA-Qy-pAc">
@@ -95,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jiy-Gm-NFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874" y="-172"/>
+            <point key="canvasLocation" x="2305" y="138"/>
         </scene>
         <!--Overview View Controller-->
         <scene sceneID="N8c-Y9-uPj">
@@ -114,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTr-52-CKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="422"/>
+            <point key="canvasLocation" x="1591" y="859"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

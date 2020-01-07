@@ -63,8 +63,7 @@ class CoreDataStack {
     
     // MARK: - Core Data Saving support
     
-    var fetchedWSPs = [FormMO]()
-    var fetchedSteps = [StepMO]()
+    var fetchedAircrafts = [AircraftMO]()
     
     func storeQuestions(){
         
@@ -88,20 +87,14 @@ class CoreDataStack {
 //        fetchFriend()
 //    }
 
-    func fetchForms(){
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Form")
-        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
-        
-        fetchRequest.sortDescriptors = [sortDescriptor]
+    func fetchAircrafts(){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Aircraft")
         
         do {
-            self.fetchedWSPs = try managedObjectContext.fetch(fetchRequest) as! [FormMO]
+            self.fetchedAircrafts = try managedObjectContext.fetch(fetchRequest) as! [AircraftMO]
         } catch {
             print(error)
         }
-        
-    }
-    func fetchSteps(){
         
     }
     func saveContext () {

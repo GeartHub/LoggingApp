@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Aircraft)
-public class Aircraft: NSManagedObject {
+@objc(AircraftMO)
+public class AircraftMO: NSManagedObject {
 
 }

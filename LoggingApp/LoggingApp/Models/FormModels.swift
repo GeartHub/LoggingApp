@@ -29,7 +29,6 @@ class FormTemplate {
     var type: FormType?
     
     init(formType: FormType, form: FormMO? = nil) {
-        print(formType)
         self.type = formType
         switch formType {
         case .new:
