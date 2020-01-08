@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A43-Qd-eoT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A43-Qd-eoT">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-RegularItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="0jg-pd-k3Q">
@@ -50,51 +55,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-G9-7dV">
-                                <rect key="frame" x="20" y="349" width="392" height="125"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlM-dx-US1">
+                                <rect key="frame" x="345" y="464" width="140" height="275"/>
+                                <fontDescription key="fontDescription" name=".SFUI-RegularItalic" family=".AppleSystemUIFont" pointSize="248"/>
+                                <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-G9-7dV">
+                                <rect key="frame" x="105" y="392" width="260" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="5Jn-Ed-oxN"/>
-                                    <constraint firstAttribute="width" constant="625" id="vzh-Yd-wzQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <inset key="imageEdgeInsets" minX="95" minY="0.0" maxX="0.0" maxY="69"/>
-                                <state key="normal" title="Werk Stappen Plan" image="text.badge.checkmark" catalog="system">
+                                <state key="normal" title="Werk Stappen Plan">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="M6S-aV-hqi" kind="show" identifier="CreateNewWSPSegue" id="d0W-3M-mGB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-Dk-58c">
-                                <rect key="frame" x="420" y="352" width="394" height="126"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-Dk-58c">
+                                <rect key="frame" x="169" y="713" width="133" height="51"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="625" id="UKm-Sv-QJr"/>
-                                    <constraint firstAttribute="height" constant="125" id="mcq-O7-4o7"/>
-                                </constraints>
-                                <state key="normal" title="Show WSPS">
-                                    <color key="titleColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Overzicht">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="VZV-OF-Q11" kind="show" identifier="ShowWSPSegue" id="mx3-8E-SfH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serial number: J234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqx-QI-2LU">
-                                <rect key="frame" x="257" y="72" width="321" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial number: J234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqx-QI-2LU">
+                                <rect key="frame" x="238" y="77" width="321" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <color key="textColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZE-Vv-2YA">
+                                <rect key="frame" x="445" y="382" width="260" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Overgave formulier">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IX4-wX-e6G">
+                                <rect key="frame" x="511" y="701" width="121" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Logboek">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.68235294117647061" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="T0X-G9-7dV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="QOJ-Gh-PhR"/>
-                            <constraint firstItem="T0X-G9-7dV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="Rmb-7w-3f9"/>
+                            <constraint firstItem="rlM-dx-US1" firstAttribute="leading" secondItem="uQ1-Dk-58c" secondAttribute="trailing" constant="43" id="9Rh-rc-HFD"/>
+                            <constraint firstItem="rlM-dx-US1" firstAttribute="top" secondItem="T0X-G9-7dV" secondAttribute="bottom" constant="21" id="A3s-Q5-9bb"/>
+                            <constraint firstItem="RZE-Vv-2YA" firstAttribute="leading" secondItem="T0X-G9-7dV" secondAttribute="trailing" constant="80" id="K2N-Fs-tf1"/>
+                            <constraint firstItem="IX4-wX-e6G" firstAttribute="leading" secondItem="rlM-dx-US1" secondAttribute="trailing" constant="26" id="LO5-eC-VSG"/>
+                            <constraint firstItem="Mqx-QI-2LU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="238" id="Map-Vw-gUV"/>
+                            <constraint firstItem="IX4-wX-e6G" firstAttribute="top" secondItem="RZE-Vv-2YA" secondAttribute="bottom" constant="268" id="X9L-1g-o9c"/>
+                            <constraint firstItem="Mqx-QI-2LU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="Z3h-fh-5bC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rlM-dx-US1" secondAttribute="bottom" constant="435" id="dXb-3h-ESm"/>
+                            <constraint firstItem="uQ1-Dk-58c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="eXd-8N-UAa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mqx-QI-2LU" secondAttribute="trailing" constant="275" id="fZQ-sG-kaP"/>
+                            <constraint firstItem="T0X-G9-7dV" firstAttribute="top" secondItem="Mqx-QI-2LU" secondAttribute="bottom" constant="270" id="fkW-SL-OWa"/>
+                            <constraint firstItem="uQ1-Dk-58c" firstAttribute="top" secondItem="T0X-G9-7dV" secondAttribute="bottom" constant="270" id="jGh-4H-aww"/>
+                            <constraint firstItem="RZE-Vv-2YA" firstAttribute="top" secondItem="Mqx-QI-2LU" secondAttribute="bottom" constant="260" id="otN-p2-sGH"/>
+                            <constraint firstItem="T0X-G9-7dV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="yJz-Hn-dQV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -120,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="2305" y="138"/>
         </scene>
-        <!--Overview View Controller-->
+        <!--Overzicht-->
         <scene sceneID="N8c-Y9-uPj">
             <objects>
                 <viewController id="VZV-OF-Q11" customClass="WSPOverviewViewController" customModule="LoggingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +159,7 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="NgV-KD-YI4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4MY-i6-RTi"/>
+                    <navigationItem key="navigationItem" title="Overzicht" id="4MY-i6-RTi"/>
                     <connections>
                         <segue destination="M6S-aV-hqi" kind="show" identifier="formSelectedSegue" id="3d8-4v-egG"/>
                     </connections>
@@ -140,9 +169,6 @@
             <point key="canvasLocation" x="1591" y="859"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="text.badge.checkmark" catalog="system" width="64" height="54"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="d0W-3M-mGB"/>
     </inferredMetricsTieBreakers>
