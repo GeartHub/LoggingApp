@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A43-Qd-eoT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A43-Qd-eoT">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="53" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Logboek-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoggingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,24 +50,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-G9-7dV">
-                                <rect key="frame" x="362" y="427" width="118" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-G9-7dV">
+                                <rect key="frame" x="20" y="349" width="392" height="125"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <state key="normal" title="Create WSP">
-                                    <color key="titleColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="5Jn-Ed-oxN"/>
+                                    <constraint firstAttribute="width" constant="625" id="vzh-Yd-wzQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="95" minY="0.0" maxX="0.0" maxY="69"/>
+                                <state key="normal" title="Werk Stappen Plan" image="text.badge.checkmark" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="M6S-aV-hqi" kind="show" identifier="CreateNewWSPSegue" id="d0W-3M-mGB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-Dk-58c">
-                                <rect key="frame" x="376" y="698" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-Dk-58c">
+                                <rect key="frame" x="420" y="352" width="394" height="126"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="625" id="UKm-Sv-QJr"/>
+                                    <constraint firstAttribute="height" constant="125" id="mcq-O7-4o7"/>
+                                </constraints>
                                 <state key="normal" title="Show WSPS">
                                     <color key="titleColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -75,42 +83,38 @@
                                     <segue destination="VZV-OF-Q11" kind="show" identifier="ShowWSPSegue" id="mx3-8E-SfH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serial number: J234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqx-QI-2LU">
+                                <rect key="frame" x="257" y="72" width="321" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90980392156862744" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.68235294117647061" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="T0X-G9-7dV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="QOJ-Gh-PhR"/>
+                            <constraint firstItem="T0X-G9-7dV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="Rmb-7w-3f9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1pC-ow-B4W"/>
+                    <navigationItem key="navigationItem" title="Logboek" id="1pC-ow-B4W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="138"/>
+            <point key="canvasLocation" x="833.8129496402878" y="137.68844221105527"/>
         </scene>
-        <!--View Controller-->
+        <!--Werk Stappen Plan (WSP)-->
         <scene sceneID="rwA-Qy-pAc">
             <objects>
                 <viewController id="M6S-aV-hqi" customClass="WSPViewController" customModule="LoggingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9hi-aG-sdW">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Werk Stappen Plan (WSP) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quM-h6-aH5">
-                                <rect key="frame" x="50" y="100" width="419" height="44.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <color key="textColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="quM-h6-aH5" firstAttribute="top" secondItem="yzt-pK-c1n" secondAttribute="top" constant="50" id="FVz-pc-A6R"/>
-                            <constraint firstItem="quM-h6-aH5" firstAttribute="leading" secondItem="yzt-pK-c1n" secondAttribute="leading" constant="50" id="XC8-GK-FK6"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yzt-pK-c1n"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ra0-GL-8YV"/>
-                    <connections>
-                        <outlet property="wspTitleLabel" destination="quM-h6-aH5" id="ERu-t4-28h"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Werk Stappen Plan (WSP)" id="Ra0-GL-8YV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jiy-Gm-NFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,6 +140,9 @@
             <point key="canvasLocation" x="1591" y="859"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="text.badge.checkmark" catalog="system" width="64" height="54"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="d0W-3M-mGB"/>
     </inferredMetricsTieBreakers>
