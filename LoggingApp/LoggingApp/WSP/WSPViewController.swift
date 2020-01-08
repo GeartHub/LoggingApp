@@ -18,7 +18,6 @@ class WSPViewController: UIViewController {
     var logbookItem: FormMO?
     let context = CoreDataStack.instance.managedObjectContext
     var formTemplate: FormTemplate?
-    @IBOutlet weak var wspTitleLabel: UILabel!
     
     private lazy var questionsView : UITableView = {
         var tableView = UITableView()
@@ -73,7 +72,7 @@ class WSPViewController: UIViewController {
     }
     
     internal func setupConstraints() {
-        NSLayoutConstraint.activate([questionsView.topAnchor.constraint(equalTo: wspTitleLabel.bottomAnchor),
+        NSLayoutConstraint.activate([questionsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
                                      questionsView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
                                      questionsView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
                                      questionsView.bottomAnchor.constraint(equalTo: backAndForwardBar.topAnchor)])
