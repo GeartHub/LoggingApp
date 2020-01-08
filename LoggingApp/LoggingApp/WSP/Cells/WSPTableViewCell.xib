@@ -23,8 +23,6 @@
                                 <rect key="frame" x="514" y="20" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="HBU-oE-arh"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="SoC-aR-ohv"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="fAd-AK-9Uf"/>
                                     <constraint firstAttribute="height" constant="36" id="nGw-3B-R5l"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -58,22 +56,40 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TP-Uu-bPS">
-                                <rect key="frame" x="20" y="28" width="474" height="20.5"/>
+                                <rect key="frame" x="103" y="28" width="391" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpB-vb-JcE">
+                                <rect key="frame" x="25" y="20" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Fyr-EO-klS"/>
+                                    <constraint firstAttribute="height" constant="36" id="Yqk-OD-YrW"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="pencil.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="addParticularityButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="M5E-cO-hMM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mJH-dD-mAk" firstAttribute="top" secondItem="fMO-Le-2kr" secondAttribute="top" constant="20" id="3Ji-kv-Apk"/>
                             <constraint firstItem="GKr-pe-1ie" firstAttribute="leading" secondItem="8TP-Uu-bPS" secondAttribute="trailing" constant="20" id="6ct-uE-2aX"/>
                             <constraint firstItem="mJH-dD-mAk" firstAttribute="leading" secondItem="GKr-pe-1ie" secondAttribute="trailing" constant="20" id="CIj-og-H6O"/>
+                            <constraint firstItem="lpB-vb-JcE" firstAttribute="leading" secondItem="fMO-Le-2kr" secondAttribute="leading" constant="25" id="Jbd-D0-s1U"/>
                             <constraint firstAttribute="bottom" secondItem="mJH-dD-mAk" secondAttribute="bottom" constant="20" id="PQH-O7-qZt"/>
                             <constraint firstItem="GKr-pe-1ie" firstAttribute="top" secondItem="fMO-Le-2kr" secondAttribute="top" constant="20" id="S1F-9T-QSe"/>
                             <constraint firstAttribute="bottom" secondItem="GKr-pe-1ie" secondAttribute="bottom" constant="20" id="TOP-pS-clf"/>
+                            <constraint firstItem="lpB-vb-JcE" firstAttribute="centerY" secondItem="fMO-Le-2kr" secondAttribute="centerY" id="V2g-7h-7se"/>
                             <constraint firstItem="8TP-Uu-bPS" firstAttribute="centerY" secondItem="fMO-Le-2kr" secondAttribute="centerY" id="V7M-KP-tDp"/>
-                            <constraint firstItem="8TP-Uu-bPS" firstAttribute="leading" secondItem="fMO-Le-2kr" secondAttribute="leading" constant="20" id="ZLp-Nf-M97"/>
+                            <constraint firstItem="8TP-Uu-bPS" firstAttribute="leading" secondItem="lpB-vb-JcE" secondAttribute="trailing" constant="42" id="ZLp-Nf-M97"/>
                             <constraint firstAttribute="trailing" secondItem="mJH-dD-mAk" secondAttribute="trailing" constant="20" id="brC-Un-PYs"/>
                         </constraints>
                     </view>
@@ -88,6 +104,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addParticularityButton" destination="lpB-vb-JcE" id="l96-CU-vp9"/>
                 <outlet property="noButton" destination="mJH-dD-mAk" id="u2q-Ue-myH"/>
                 <outlet property="questionTitleLabel" destination="8TP-Uu-bPS" id="qUC-lL-dfE"/>
                 <outlet property="yesButton" destination="GKr-pe-1ie" id="eNo-LC-H8u"/>
@@ -98,5 +115,6 @@
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="64" height="60"/>
         <image name="minus.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="pencil.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

@@ -146,4 +146,8 @@ extension WSPViewController: ButtonBarViewDelegate {
     
     func previousButtonTapped(_ button: UIButton) {
     }
+    
+    func addParticularityButtonTapped(_ button: UIButton, _ cell: WSPTableViewCell) {
+        
+    }
 }

@@ -11,6 +11,7 @@ import UIKit
 protocol WSPTableViewCellDelegate {
     func yesButtonTapped(_ button: UIButton, _ cell: WSPTableViewCell)
     func noButtonTapped(_ button: UIButton,_ cell: WSPTableViewCell)
+    func addParticularityButtonTapped(_ button: UIButton, _ cell: WSPTableViewCell)
 }
 
 class WSPTableViewCell: UITableViewCell {
@@ -18,6 +19,7 @@ class WSPTableViewCell: UITableViewCell {
     @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
+    @IBOutlet weak var addParticularityButton: UIButton!
     
     var newQuestion: Bool = true
     var state: FormType = .answered
@@ -62,4 +64,8 @@ class WSPTableViewCell: UITableViewCell {
         question?.options = false
         delegate?.noButtonTapped(sender as! UIButton, self)
     }
+    @IBAction func addParticularityButtonTapped(_ sender: Any) {
+        delegate?.addParticularityButtonTapped(sender as! UIButton, self)
+    }
+    
 }
