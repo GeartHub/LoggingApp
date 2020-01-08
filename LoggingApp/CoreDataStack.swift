@@ -61,6 +61,10 @@ class CoreDataStack {
         return managedObjectContext
     }()
     
+    
+    // MARK: - First time launch
+    var aircraftTypes: [String] = ["F-16", "Alouette III", "Cirrus SR22"]
+    var aircraftSerialNumbers: [String] = ["J-234", "A-319", "SR22-2889"]
     // MARK: - Core Data Saving support
     
     var fetchedAircrafts = [AircraftMO]()
@@ -92,6 +96,15 @@ class CoreDataStack {
         
         do {
             self.fetchedAircrafts = try managedObjectContext.fetch(fetchRequest) as! [AircraftMO]
+            if self.fetchedAircrafts.isEmpty {
+                for (index, aircraftType) in aircraftTypes.enumerated() {
+                    let aircraft = AircraftMO(context: self.managedObjectContext)
+                    aircraft.serialnumber = aircraftSerialNumbers[index]
+                    aircraft.type = aircraftType
+                    saveContext()
+                }
+                self.fetchAircrafts()
+            }
         } catch {
             print(error)
         }
