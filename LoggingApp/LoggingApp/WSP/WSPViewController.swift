@@ -83,6 +83,14 @@ class WSPViewController: UIViewController {
                                      backAndForwardBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
                                      backAndForwardBar.heightAnchor.constraint(equalToConstant: 80)])
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddParticularitiesSegue", let destination = segue.destination as? AddParticularitiesViewController {
+            guard let cell = sender as? WSPTableViewCell else { return }
+            destination.question = cell.question
+            destination.delegate = self
+        }
+    }
 }
 
 extension WSPViewController: UITableViewDataSource, UITableViewDelegate {
@@ -93,11 +101,6 @@ extension WSPViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WSPCell", for: indexPath) as! WSPTableViewCell
         cell.delegate = self
-        
-        cell.yesButton.tintColor = .systemGray
-        cell.noButton.tintColor = .systemGray
-        
-        cell.state = formTemplate?.type ?? .answered
         
         cell.question = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexPath.row]
         return cell
@@ -112,18 +115,14 @@ extension WSPViewController: WSPTableViewCellDelegate {
     func yesButtonTapped(_ button: UIButton, _ cell: WSPTableViewCell) {
         button.tintColor = .systemBlue
         
-        guard let questionFromCell = cell.question else { return }
-        if let indexOfQuestion = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray.firstIndex(of: questionFromCell) {
-            formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexOfQuestion].options = questionFromCell.options
-        }
+//        guard let questionFromCell = cell.question else { return }
+//        if let indexOfQuestion = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray.firstIndex(of: questionFromCell) {
+//            formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexOfQuestion].options = questionFromCell.options
+//        }
     }
     
     func noButtonTapped(_ button: UIButton, _ cell: WSPTableViewCell) {
         button.tintColor = .systemRed
-        guard let questionFromCell = cell.question else { return }
-        if let indexOfQuestion = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray.firstIndex(of: questionFromCell) {
-            formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexOfQuestion].options = questionFromCell.options
-        }
     }
 }
 
@@ -145,9 +144,19 @@ extension WSPViewController: ButtonBarViewDelegate {
     }
     
     func previousButtonTapped(_ button: UIButton) {
+        self.currentStepNumber -= 1
+        setupForm()
     }
     
     func addParticularityButtonTapped(_ button: UIButton, _ cell: WSPTableViewCell) {
-        
+        performSegue(withIdentifier: "AddParticularitiesSegue", sender: cell)
     }
+}
+
+extension WSPViewController: AddParticularitiesViewControllerDelegate {
+    func doneButtonTapped(_ sender: Any) {
+        questionsView.reloadData()
+    }
+    
+    
 }

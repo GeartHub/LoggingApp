@@ -22,22 +22,29 @@ class WSPTableViewCell: UITableViewCell {
     @IBOutlet weak var addParticularityButton: UIButton!
     
     var newQuestion: Bool = true
-    var state: FormType = .answered
     var delegate: WSPTableViewCellDelegate?
     var question: QuestionMO? {
         didSet {
             self.questionTitleLabel.text = question?.title
-            switch state {
-            case .answered:
-                guard let answer = question?.options else { return }
-                switch answer {
-                case true:
-                    yesButton.tintColor = .systemBlue
-                case false:
-                    noButton.tintColor = .systemRed
-                }
-            case .new:
-                break
+            guard let answer = question?.options else { return }
+            switch answer {
+            case 2:
+                yesButton.tintColor = .systemBlue
+            case 1:
+                noButton.tintColor = .systemRed
+            default:
+                noButton.tintColor = .systemGray
+                yesButton.tintColor = .systemGray
+                addParticularityButton.tintColor = .systemGray
+                let config = UIImage.SymbolConfiguration(pointSize: 40, weight: .light, scale: .large)
+                let filledPen = UIImage(systemName: "pencil.circle", withConfiguration: config)
+                self.addParticularityButton.setImage(filledPen, for: .normal)
+            }
+            if let particularity = question?.particularities {
+                let config = UIImage.SymbolConfiguration(pointSize: 40, weight: .light, scale: .large)
+                let filledPen = UIImage(systemName: "pencil.circle.fill", withConfiguration: config)
+                addParticularityButton.setImage(filledPen, for: .normal)
+                addParticularityButton.tintColor = .systemBlue
             }
         }
     }
@@ -55,13 +62,13 @@ class WSPTableViewCell: UITableViewCell {
     
     @IBAction func yesButtonTapped(_ sender: Any) {
         noButton.tintColor = .systemGray
-        question?.options = true
+        question?.options = 2
         delegate?.yesButtonTapped(sender as! UIButton, self)
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
         yesButton.tintColor = .systemGray
-        question?.options = false
+        question?.options = 1
         delegate?.noButtonTapped(sender as! UIButton, self)
     }
     @IBAction func addParticularityButtonTapped(_ sender: Any) {

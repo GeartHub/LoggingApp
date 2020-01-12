@@ -73,6 +73,4 @@ extension WSPOverviewViewController: UITableViewDelegate, UITableViewDataSource 
         let selectedForm = aircraft?.formsArray[indexPath.row]
         performSegue(withIdentifier: "formSelectedSegue", sender: selectedForm)
     }
-    
-    
 }
