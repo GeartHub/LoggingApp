@@ -2,7 +2,7 @@
 //  StepMO+CoreDataProperties.swift
 //  LoggingApp
 //
-//  Created by Geart Otten on 07/01/2020.
+//  Created by Geart Otten on 12/01/2020.
 //  Copyright © 2020 Geart Otten. All rights reserved.
 //
 //
@@ -17,8 +17,8 @@ extension StepMO {
         return NSFetchRequest<StepMO>(entityName: "Step")
     }
 
+    @NSManaged public var order: Double
     @NSManaged public var title: String?
-    @NSManaged public var order: Int32
     @NSManaged public var form: Set<FormMO>?
     @NSManaged public var questions: Set<QuestionMO>?
    

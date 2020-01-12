@@ -156,10 +156,78 @@
                         <viewLayoutGuide key="safeArea" id="yzt-pK-c1n"/>
                     </view>
                     <navigationItem key="navigationItem" title="Werk Stappen Plan (WSP)" id="Ra0-GL-8YV"/>
+                    <connections>
+                        <segue destination="Bur-PC-EHA" kind="presentation" identifier="AddParticularitiesSegue" modalPresentationStyle="overFullScreen" id="5fY-SF-Ikw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jiy-Gm-NFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2305" y="138"/>
+        </scene>
+        <!--Add Particularities View Controller-->
+        <scene sceneID="rdh-hF-ar0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaM-2Y-uNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Bur-PC-EHA" customClass="AddParticularitiesViewController" customModule="LoggingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KfF-Rr-T1J">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO6-QG-0MW">
+                                <rect key="frame" x="187.5" y="495.5" width="459" height="203"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeA-m0-1S0">
+                                        <rect key="frame" x="385" y="162" width="58" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="dgm-ec-2a1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="Bur-PC-EHA" eventType="touchUpInside" id="k98-fJ-ary"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voeg een opmerking toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxF-RI-huo">
+                                        <rect key="frame" x="58" y="58" width="187" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Voeg opmerking toe..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dg2-oM-DXg">
+                                        <rect key="frame" x="58" y="111" width="293" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="aeA-m0-1S0" firstAttribute="trailing" secondItem="EO6-QG-0MW" secondAttribute="trailingMargin" constant="-8" id="6zU-Aa-zad"/>
+                                    <constraint firstItem="dg2-oM-DXg" firstAttribute="trailing" secondItem="EO6-QG-0MW" secondAttribute="trailingMargin" constant="-100" id="8QS-lE-MRa"/>
+                                    <constraint firstItem="dg2-oM-DXg" firstAttribute="leading" secondItem="EO6-QG-0MW" secondAttribute="leadingMargin" constant="50" id="QnF-qG-yZR"/>
+                                    <constraint firstAttribute="height" constant="203" id="Y9S-t2-rZS"/>
+                                    <constraint firstAttribute="width" constant="459" id="ZcA-5L-FJh"/>
+                                    <constraint firstItem="aeA-m0-1S0" firstAttribute="bottom" secondItem="EO6-QG-0MW" secondAttribute="bottomMargin" constant="-8" id="bBQ-3d-ahh"/>
+                                    <constraint firstItem="GxF-RI-huo" firstAttribute="leading" secondItem="EO6-QG-0MW" secondAttribute="leadingMargin" constant="50" id="bfo-eW-619"/>
+                                    <constraint firstItem="GxF-RI-huo" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="EO6-QG-0MW" secondAttribute="trailingMargin" constant="100" id="oYc-fc-5lx"/>
+                                    <constraint firstItem="dg2-oM-DXg" firstAttribute="bottom" secondItem="EO6-QG-0MW" secondAttribute="bottomMargin" constant="-50" id="pF0-oM-ixx"/>
+                                    <constraint firstItem="GxF-RI-huo" firstAttribute="top" secondItem="EO6-QG-0MW" secondAttribute="topMargin" constant="50" id="sqs-zl-bVK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EO6-QG-0MW" firstAttribute="centerX" secondItem="KfF-Rr-T1J" secondAttribute="centerX" id="cuD-gW-nca"/>
+                            <constraint firstItem="EO6-QG-0MW" firstAttribute="centerY" secondItem="KfF-Rr-T1J" secondAttribute="centerY" id="iqX-Bd-KXh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PAe-RJ-Nzv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dot-Qw-FUh"/>
+                    <connections>
+                        <outlet property="particularityTextField" destination="dg2-oM-DXg" id="B0z-4g-B0b"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3146.7625899280579" y="137.68844221105527"/>
         </scene>
         <!--Overzicht-->
         <scene sceneID="N8c-Y9-uPj">

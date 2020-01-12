@@ -55,7 +55,7 @@ class FormTemplate {
                         stepInLogbookItem.order = Int32(numberOfStep)
                         for (numberOfQuestion, question) in step.questionTitles.enumerated() {
                             let questionInStep = QuestionMO(context: context)
-                            questionInStep.order = Int32(numberOfQuestion)
+                            questionInStep.order = Double(numberOfQuestion)
                             questionInStep.title = question
                             questionInStep.addToStep(stepInLogbookItem)
                         }

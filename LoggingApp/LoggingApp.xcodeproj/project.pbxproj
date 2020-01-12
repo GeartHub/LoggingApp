@@ -40,6 +40,7 @@
 		DABCEE88239E553E006416FB /* LoggingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE87239E553E006416FB /* LoggingAppTests.swift */; };
 		DABCEE93239E553E006416FB /* LoggingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE92239E553E006416FB /* LoggingAppUITests.swift */; };
 		DAC9966C239FC8A6007B4688 /* WSPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9966B239FC8A6007B4688 /* WSPViewController.swift */; };
+		DACF688023CA34FB0083B556 /* AddParticularitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF687F23CA34FB0083B556 /* AddParticularitiesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		DABCEE92239E553E006416FB /* LoggingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingAppUITests.swift; sourceTree = "<group>"; };
 		DABCEE94239E553E006416FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAC9966B239FC8A6007B4688 /* WSPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSPViewController.swift; sourceTree = "<group>"; };
+		DACF687F23CA34FB0083B556 /* AddParticularitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticularitiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				DA3CB3C923C14E3A00EEE8FA /* StepMO+CoreDataProperties.swift */,
 				DA3CB3CA23C14E3A00EEE8FA /* QuestionMO+CoreDataProperties.swift */,
 				DA38894B23A2503000F22343 /* CoreDataStack.swift */,
+				DAB9220923A130AA0071563C /* WSP.xcdatamodeld */,
 				DABCEE6F239E553A006416FB /* LoggingApp */,
 				DABCEE86239E553E006416FB /* LoggingAppTests */,
 				DABCEE91239E553E006416FB /* LoggingAppUITests */,
@@ -246,9 +249,9 @@
 				DA326A9F23B6A28E0089AEFD /* Views */,
 				DA0530BB23B4C1D300F1BD84 /* Cells */,
 				DA294D5523A970AD00F19978 /* wsp.json */,
-				DAB9220923A130AA0071563C /* WSP.xcdatamodeld */,
 				DAC9966B239FC8A6007B4688 /* WSPViewController.swift */,
 				DA0E089A23BF504C00C703E8 /* WSPOverviewViewController.swift */,
+				DACF687F23CA34FB0083B556 /* AddParticularitiesViewController.swift */,
 			);
 			path = WSP;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				DABCEE71239E553A006416FB /* AppDelegate.swift in Sources */,
 				DABCEE73239E553A006416FB /* SceneDelegate.swift in Sources */,
 				DA294D5B23A977FB00F19978 /* CamelCaseJSONDecoder.swift in Sources */,
+				DACF688023CA34FB0083B556 /* AddParticularitiesViewController.swift in Sources */,
 				DA294D5923A9711A00F19978 /* FormModels.swift in Sources */,
 				DA38894C23A2503000F22343 /* CoreDataStack.swift in Sources */,
 				DA0E089E23BF757E00C703E8 /* WSPOverviewTableViewCell.swift in Sources */,
