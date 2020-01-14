@@ -52,7 +52,7 @@ class FormTemplate {
                     for (numberOfStep, step) in form.steps.enumerated() {
                         let stepInLogbookItem = StepMO(context: context)
                         stepInLogbookItem.title = step.title
-                        stepInLogbookItem.order = Int32(numberOfStep)
+                        stepInLogbookItem.order = Double(numberOfStep)
                         for (numberOfQuestion, question) in step.questionTitles.enumerated() {
                             let questionInStep = QuestionMO(context: context)
                             questionInStep.order = Double(numberOfQuestion)

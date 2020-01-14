@@ -20,6 +20,9 @@ class WSPTableViewCell: UITableViewCell {
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var addParticularityButton: UIButton!
+    @IBOutlet weak var particularityView: UIView!
+    @IBOutlet weak var particularitiesLabel: UILabel!
+    @IBOutlet weak var particularityHeightConstraint: NSLayoutConstraint!
     
     var newQuestion: Bool = true
     var delegate: WSPTableViewCellDelegate?
@@ -41,16 +44,24 @@ class WSPTableViewCell: UITableViewCell {
                 self.addParticularityButton.setImage(filledPen, for: .normal)
             }
             if let particularity = question?.particularities {
+                particularitiesLabel.text = "Opmerkingen: \(particularity)"
+                particularityHeightConstraint.constant = 27
+                particularityView.updateConstraints()
                 let config = UIImage.SymbolConfiguration(pointSize: 40, weight: .light, scale: .large)
                 let filledPen = UIImage(systemName: "pencil.circle.fill", withConfiguration: config)
                 addParticularityButton.setImage(filledPen, for: .normal)
                 addParticularityButton.tintColor = .systemBlue
+            } else if question?.particularities == nil {
+                particularityHeightConstraint.constant = 0
+                particularityView.updateConstraints()
             }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor = .clear
+        
         // Initialization code
     }
 
