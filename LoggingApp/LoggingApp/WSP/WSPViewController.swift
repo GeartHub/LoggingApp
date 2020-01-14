@@ -102,7 +102,16 @@ extension WSPViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WSPCell", for: indexPath) as! WSPTableViewCell
         cell.delegate = self
         
-        cell.question = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexPath.row]
+        if let question = formTemplate?.form?.stepsArray[currentStepNumber].questionsArray[indexPath.row] {
+            if question.particularities != nil {
+                cell.particularityHeightConstraint.constant = 27
+                UIView.animate(withDuration: 0.25, animations: {
+                    cell.layoutIfNeeded()
+                })
+            }
+            cell.question = question
+        }
+        
         return cell
     }
     

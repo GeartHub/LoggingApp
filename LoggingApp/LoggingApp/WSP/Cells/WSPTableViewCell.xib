@@ -91,10 +91,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3c-ab-gLJ" userLabel="ParticularityView">
-                        <rect key="frame" x="30" y="80" width="589" height="27"/>
+                        <rect key="frame" x="30" y="80" width="589" height="0.0"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfm-b8-I63" userLabel="Particularities Label">
-                                <rect key="frame" x="20" y="0.0" width="0.0" height="27"/>
+                                <rect key="frame" x="20" y="0.0" width="0.0" height="0.0"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,7 +106,7 @@
                             <constraint firstItem="nfm-b8-I63" firstAttribute="leading" secondItem="H3c-ab-gLJ" secondAttribute="leading" constant="20" symbolic="YES" id="1e3-TN-1tE"/>
                             <constraint firstAttribute="bottom" secondItem="nfm-b8-I63" secondAttribute="bottom" id="8uP-8h-ffi"/>
                             <constraint firstItem="nfm-b8-I63" firstAttribute="top" secondItem="H3c-ab-gLJ" secondAttribute="top" id="bHc-n7-lkF"/>
-                            <constraint firstAttribute="height" constant="27" id="lbf-QV-saO"/>
+                            <constraint firstAttribute="height" id="sCn-Vr-K9l"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -126,7 +126,7 @@
                 <outlet property="addParticularityButton" destination="lpB-vb-JcE" id="l96-CU-vp9"/>
                 <outlet property="noButton" destination="mJH-dD-mAk" id="u2q-Ue-myH"/>
                 <outlet property="particularitiesLabel" destination="nfm-b8-I63" id="vKp-Vm-0r7"/>
-                <outlet property="particularityHeightConstraint" destination="lbf-QV-saO" id="OSH-0n-jMd"/>
+                <outlet property="particularityHeightConstraint" destination="sCn-Vr-K9l" id="T44-CU-c17"/>
                 <outlet property="particularityView" destination="H3c-ab-gLJ" id="jU6-Sb-Vs8"/>
                 <outlet property="questionTitleLabel" destination="8TP-Uu-bPS" id="qUC-lL-dfE"/>
                 <outlet property="yesButton" destination="GKr-pe-1ie" id="eNo-LC-H8u"/>
