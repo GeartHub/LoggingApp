@@ -12,11 +12,17 @@ class WSPOverviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var createAtLabel: UILabel!
+    @IBOutlet weak var cellContent: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
+        self.cellContent.layer.cornerRadius = 8
+        self.cellContent.clipsToBounds = true
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.1;
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
