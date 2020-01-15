@@ -72,7 +72,7 @@ class WSPViewController: UIViewController {
     }
     
     internal func setupConstraints() {
-        NSLayoutConstraint.activate([questionsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+        NSLayoutConstraint.activate([questionsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 200),
                                      questionsView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
                                      questionsView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
                                      questionsView.bottomAnchor.constraint(equalTo: backAndForwardBar.topAnchor)])

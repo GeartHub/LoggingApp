@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A43-Qd-eoT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A43-Qd-eoT">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -152,22 +152,109 @@
                     <view key="view" contentMode="scaleToFill" id="9hi-aG-sdW">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVZ-mk-MJJ" customClass="topBorder">
+                                <rect key="frame" x="0.0" y="50" width="834" height="166"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan Bergsma                       27-04-2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="qIA-oN-b0E">
+                                        <rect key="frame" x="471" y="38" width="313.5" height="45"/>
+                                        <color key="backgroundColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="313.5" id="7G0-Iz-dsG"/>
+                                            <constraint firstAttribute="width" constant="313.5" id="8VX-ac-ofR"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="313.5" id="KGg-5J-DLF"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Nzv-Ze-WhI"/>
+                                            <constraint firstAttribute="height" constant="45" id="P9j-9W-iYm"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="313.5" id="S1I-sT-CzO"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="T4h-bG-EO2"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="VgR-qe-Dsn"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="ZsY-UF-hvd"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="gRB-JR-gpi"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="h6G-NA-BKo"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="313.5" id="pqg-ud-Ber"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="313.5" id="vzZ-Sg-5FP"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="313.5" id="zke-US-B4n"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Form titel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohw-cJ-Zxu">
+                                        <rect key="frame" x="91" y="44" width="359" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="359" id="FgQ-GZ-gLP"/>
+                                            <constraint firstAttribute="height" constant="34" id="twH-AP-iuh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stap 1: Opdrancht accepteren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-oN-nDU">
+                                        <rect key="frame" x="91" y="128" width="281" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="53N-OI-9gW"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="281" id="ENY-wh-En4"/>
+                                            <constraint firstAttribute="height" constant="24" id="Szb-SK-Rh0"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="281" id="UxQ-P6-IGI"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="281" id="VJ2-lz-gfY"/>
+                                            <constraint firstAttribute="width" constant="281" id="Xs8-a5-sY8"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="lL1-7B-Lhr"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="m1V-em-DzN"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="pKi-pb-sNu"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="281" id="spQ-3j-O8A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="qIA-oN-b0E" secondAttribute="bottom" constant="75" id="KJd-G6-cwh"/>
+                                    <constraint firstItem="MeE-oN-nDU" firstAttribute="leading" secondItem="hVZ-mk-MJJ" secondAttribute="leadingMargin" constant="83" id="LbI-Vx-De7"/>
+                                    <constraint firstItem="ohw-cJ-Zxu" firstAttribute="leading" secondItem="hVZ-mk-MJJ" secondAttribute="leadingMargin" constant="83" id="NZD-AC-AVp"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="qIA-oN-b0E" secondAttribute="trailing" constant="41.5" id="Q79-7w-YlW"/>
+                                    <constraint firstItem="qIA-oN-b0E" firstAttribute="top" secondItem="hVZ-mk-MJJ" secondAttribute="topMargin" constant="30" id="UrW-9S-BtG"/>
+                                    <constraint firstItem="qIA-oN-b0E" firstAttribute="leading" secondItem="ohw-cJ-Zxu" secondAttribute="trailing" constant="21" id="WHA-cf-0wa"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="MeE-oN-nDU" secondAttribute="bottom" constant="6" id="XBv-aQ-WPV"/>
+                                    <constraint firstItem="MeE-oN-nDU" firstAttribute="top" secondItem="ohw-cJ-Zxu" secondAttribute="bottom" constant="50" id="YHj-KH-Dzz"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MeE-oN-nDU" secondAttribute="trailing" constant="454" id="b36-nz-9Uc"/>
+                                    <constraint firstItem="ohw-cJ-Zxu" firstAttribute="top" secondItem="hVZ-mk-MJJ" secondAttribute="topMargin" constant="36" id="xL9-hZ-GE4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hVZ-mk-MJJ" firstAttribute="leading" secondItem="yzt-pK-c1n" secondAttribute="leading" id="819-rr-Adz"/>
+                            <constraint firstItem="hVZ-mk-MJJ" firstAttribute="trailing" secondItem="yzt-pK-c1n" secondAttribute="trailing" id="J69-K5-asm"/>
+                            <constraint firstItem="hVZ-mk-MJJ" firstAttribute="top" secondItem="yzt-pK-c1n" secondAttribute="top" id="SRt-9V-GxU"/>
+                            <constraint firstItem="hVZ-mk-MJJ" firstAttribute="top" secondItem="9hi-aG-sdW" secondAttribute="top" constant="50" id="wEG-iR-lVp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yzt-pK-c1n"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Werk Stappen Plan (WSP)" id="Ra0-GL-8YV"/>
+                    <navigationItem key="navigationItem" title="Werk Stappen Plan (WSP)" id="Ra0-GL-8YV">
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" style="plain" id="0kS-PO-wy9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="XwX-rg-9Ss">
+                                <rect key="frame" x="-23" y="-15" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Bur-PC-EHA" kind="presentation" identifier="AddParticularitiesSegue" modalPresentationStyle="overFullScreen" id="5fY-SF-Ikw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jiy-Gm-NFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2305" y="138"/>
+            <point key="canvasLocation" x="2304.31654676259" y="137.68844221105527"/>
         </scene>
         <!--Add Particularities View Controller-->
         <scene sceneID="rdh-hF-ar0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PaM-2Y-uNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Bur-PC-EHA" customClass="AddParticularitiesViewController" customModule="LoggingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KfF-Rr-T1J">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
@@ -226,6 +313,7 @@
                         <outlet property="particularityTextField" destination="dg2-oM-DXg" id="B0z-4g-B0b"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaM-2Y-uNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3146.7625899280579" y="137.68844221105527"/>
         </scene>
@@ -249,6 +337,9 @@
             <point key="canvasLocation" x="1591" y="859"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="d0W-3M-mGB"/>
     </inferredMetricsTieBreakers>
