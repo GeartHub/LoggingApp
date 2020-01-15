@@ -23,12 +23,18 @@ class WSPTableViewCell: UITableViewCell {
     @IBOutlet weak var particularityView: UIView!
     @IBOutlet weak var particularitiesLabel: UILabel!
     @IBOutlet weak var particularityHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cellContent: UIView!
+    
+    
     var isAnimated: Bool = false
     
     var newQuestion: Bool = true
     var delegate: WSPTableViewCellDelegate?
     var question: QuestionMO? {
         didSet {
+            noButton.tintColor = .systemGray
+            yesButton.tintColor = .systemGray
+            addParticularityButton.tintColor = .systemGray
             self.questionTitleLabel.text = question?.title
             guard let answer = question?.options else { return }
             switch answer {
@@ -37,9 +43,6 @@ class WSPTableViewCell: UITableViewCell {
             case 1:
                 noButton.tintColor = .systemRed
             default:
-                noButton.tintColor = .systemGray
-                yesButton.tintColor = .systemGray
-                addParticularityButton.tintColor = .systemGray
                 let config = UIImage.SymbolConfiguration(pointSize: 40, weight: .light, scale: .large)
                 let filledPen = UIImage(systemName: "pencil.circle", withConfiguration: config)
                 self.addParticularityButton.setImage(filledPen, for: .normal)
@@ -60,6 +63,12 @@ class WSPTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
+        
+        self.cellContent.layer.cornerRadius = 8
+        self.cellContent.clipsToBounds = true
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.1;
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
         
         // Initialization code
     }
