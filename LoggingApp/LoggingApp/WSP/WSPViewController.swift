@@ -143,6 +143,9 @@ extension WSPViewController: ButtonBarViewDelegate {
         self.currentStepNumber += 1
         if currentStepNumber < formTemplate?.form?.stepsArray.count ?? 0 {
             setupForm()
+            guard let aircraft = self.aircraft else { return }
+            formTemplate?.form?.addToAircraft(aircraft)
+            CoreDataStack.instance.saveContext()
         }
         if currentStepNumber == formTemplate?.form?.stepsArray.count ?? 0 {
             if formTemplate?.type == .new {

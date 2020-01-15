@@ -20,8 +20,10 @@ class AddParticularitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        particularityTextField.becomeFirstResponder()
         guard let particularities = question?.particularities else { return }
         particularityTextField.text = particularities
+        
     }
     @IBAction func doneButtonTapped(_ sender: Any) {
         if particularityTextField.text?.count ?? 0 > 1 {

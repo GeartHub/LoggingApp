@@ -66,7 +66,7 @@ extension WSPOverviewViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WSPOverviewCell", for: indexPath) as! WSPOverviewTableViewCell
         cell.titleLabel.text = "dikke niks"
-        cell.createAtLabel.text = aircraft?.formsArray[indexPath.row].createdAt?.toString(dateFormat: "HH:MM dd-MM-yyyy")
+        cell.createAtLabel.text = aircraft?.formsArray[indexPath.row].createdAt?.toString(dateFormat: "dd-MM-yyyy HH:MM")
         return cell
     }
     

@@ -25,16 +25,11 @@ class WSPTableViewCell: UITableViewCell {
     @IBOutlet weak var particularityHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cellContent: UIView!
     
-    
-    var isAnimated: Bool = false
-    
     var newQuestion: Bool = true
     var delegate: WSPTableViewCellDelegate?
     var question: QuestionMO? {
         didSet {
-            noButton.tintColor = .systemGray
-            yesButton.tintColor = .systemGray
-            addParticularityButton.tintColor = .systemGray
+            resetCell()
             self.questionTitleLabel.text = question?.title
             guard let answer = question?.options else { return }
             switch answer {
@@ -58,6 +53,15 @@ class WSPTableViewCell: UITableViewCell {
                 particularityView.updateConstraints()
             }
         }
+    }
+    
+    private func resetCell() {
+        noButton.tintColor = .systemGray
+        yesButton.tintColor = .systemGray
+        addParticularityButton.tintColor = .systemGray
+        let config = UIImage.SymbolConfiguration(pointSize: 40, weight: .light, scale: .large)
+        let filledPen = UIImage(systemName: "pencil.circle", withConfiguration: config)
+        self.addParticularityButton.setImage(filledPen, for: .normal)
     }
     
     override func awakeFromNib() {
