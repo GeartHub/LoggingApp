@@ -14,6 +14,13 @@ class WSPOverviewTableViewCell: UITableViewCell {
     @IBOutlet weak var createAtLabel: UILabel!
     @IBOutlet weak var cellContent: UIView!
     
+    var form: FormMO? {
+        didSet {
+            titleLabel.text = form?.title
+            createAtLabel.text = form?.createdAt?.toString(dateFormat: "dd-MM-yyyy HH:MM")
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

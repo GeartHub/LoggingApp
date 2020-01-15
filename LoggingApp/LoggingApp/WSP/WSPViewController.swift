@@ -19,6 +19,11 @@ class WSPViewController: UIViewController {
     let context = CoreDataStack.instance.managedObjectContext
     var formTemplate: FormTemplate?
     
+    @IBOutlet weak var dateAndNameView: UIView!
+    @IBOutlet weak var formTitleTextField: UITextField!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var stepTitleLabel: UILabel!
+    
     private lazy var questionsView : UITableView = {
         var tableView = UITableView()
         tableView.dataSource = self
@@ -41,6 +46,8 @@ class WSPViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         view.addSubview(questionsView)
         view.addSubview(backAndForwardBar)
         questionsView.register(UINib(nibName: "WSPTableViewCell", bundle: nil), forCellReuseIdentifier: "WSPCell")
@@ -52,12 +59,17 @@ class WSPViewController: UIViewController {
             formTemplate = FormTemplate.init(formType: .new)
         }
         
+        dateAndNameView.clipsToBounds = true
+        dateAndNameView.layer.cornerRadius = 8
+        dateLabel.text = formTemplate?.form?.createdAt?.toString(dateFormat: "dd-MM-yyyy HH:MM")
+        formTitleTextField.text = formTemplate?.form?.title
+        formTitleTextField.delegate = self
         setupForm()
         // Do any additional setup after loading the view.
     }
     
     func setupForm () {
-        
+        stepTitleLabel.text = formTemplate?.form?.stepsArray[currentStepNumber].title
         if currentStepNumber == 0 {
             backAndForwardBar.previousButton.isEnabled = false
         } else {
@@ -139,21 +151,21 @@ extension WSPViewController: WSPTableViewCellDelegate {
 
 extension WSPViewController: ButtonBarViewDelegate {
     func nextButtonTapped(_ button: UIButton) {
+        guard let formTitle = formTitleTextField.text else { return }
+        formTemplate?.form?.title = formTitle
         
         self.currentStepNumber += 1
         if currentStepNumber < formTemplate?.form?.stepsArray.count ?? 0 {
             setupForm()
+            
             guard let aircraft = self.aircraft else { return }
             formTemplate?.form?.addToAircraft(aircraft)
+            
             CoreDataStack.instance.saveContext()
         }
         if currentStepNumber == formTemplate?.form?.stepsArray.count ?? 0 {
-            if formTemplate?.type == .new {
-                guard let aircraft = self.aircraft else { return }
-                formTemplate?.form?.addToAircraft(aircraft)
-                CoreDataStack.instance.saveContext()
-            }
-            navigationController?.popToRootViewController(animated: true)
+            CoreDataStack.instance.saveContext()
+            navigationController?.popViewController(animated: true)
         }
     }
     
@@ -171,6 +183,11 @@ extension WSPViewController: AddParticularitiesViewControllerDelegate {
     func doneButtonTapped(_ sender: Any) {
         questionsView.reloadData()
     }
-    
-    
+}
+
+extension WSPViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
+    }
 }

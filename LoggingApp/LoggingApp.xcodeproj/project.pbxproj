@@ -28,6 +28,7 @@
 		DA4A435723C4B7CA008B3E73 /* Aircraft+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A435523C4B7CA008B3E73 /* Aircraft+CoreDataProperties.swift */; };
 		DA4A435A23C5348E008B3E73 /* AircraftOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A435923C5348E008B3E73 /* AircraftOverviewViewController.swift */; };
 		DA5F8F5223BF786F0085ADF9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F8F5123BF786F0085ADF9 /* Date.swift */; };
+		DA6B4C6F23CF840C00A11117 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B4C6E23CF840C00A11117 /* UIViewControllerExtensions.swift */; };
 		DAB9220B23A130AA0071563C /* WSP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAB9220923A130AA0071563C /* WSP.xcdatamodeld */; };
 		DABCEE71239E553A006416FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE70239E553A006416FB /* AppDelegate.swift */; };
 		DABCEE73239E553A006416FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCEE72239E553A006416FB /* SceneDelegate.swift */; };
@@ -83,6 +84,7 @@
 		DA4A435523C4B7CA008B3E73 /* Aircraft+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aircraft+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA4A435923C5348E008B3E73 /* AircraftOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftOverviewViewController.swift; sourceTree = "<group>"; };
 		DA5F8F5123BF786F0085ADF9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		DA6B4C6E23CF840C00A11117 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		DAB9220A23A130AA0071563C /* WSP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WSP.xcdatamodel; sourceTree = "<group>"; };
 		DABCEE6D239E553A006416FB /* LoggingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoggingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABCEE70239E553A006416FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				DA326AA423B6A3920089AEFD /* View.swift */,
 				DA5F8F5123BF786F0085ADF9 /* Date.swift */,
 				DAE7193F23CF153500AFA1E4 /* UICollectionViewCellExtensions.swift */,
+				DA6B4C6E23CF840C00A11117 /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				DA3CB3CC23C14E3A00EEE8FA /* StepMO+CoreDataProperties.swift in Sources */,
 				DA326AA523B6A3920089AEFD /* View.swift in Sources */,
 				DA3CB3CD23C14E3A00EEE8FA /* QuestionMO+CoreDataProperties.swift in Sources */,
+				DA6B4C6F23CF840C00A11117 /* UIViewControllerExtensions.swift in Sources */,
 				DA4A435A23C5348E008B3E73 /* AircraftOverviewViewController.swift in Sources */,
 				DAE7193E23CF145D00AFA1E4 /* AircraftCollectionViewCell.swift in Sources */,
 				DA0530C023B4C59D00F1BD84 /* WSPTableViewCell.swift in Sources */,
