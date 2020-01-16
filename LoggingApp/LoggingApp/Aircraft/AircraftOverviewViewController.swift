@@ -67,7 +67,9 @@ extension AircraftOverviewViewController: UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: aircraftView.frame.width / 2 - 10, height: 218)
+        return CGSize(width: aircraftView.frame.width / 2 - 5, height: 218)
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0)
+    }
 }

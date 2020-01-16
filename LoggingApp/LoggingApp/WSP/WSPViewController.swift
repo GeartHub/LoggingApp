@@ -61,7 +61,7 @@ class WSPViewController: UIViewController {
         
         dateAndNameView.clipsToBounds = true
         dateAndNameView.layer.cornerRadius = 8
-        dateLabel.text = formTemplate?.form?.createdAt?.toString(dateFormat: "dd-MM-yyyy HH:MM")
+        dateLabel.text = formTemplate?.form?.createdAt?.toString(dateFormat: "dd-MM-yyyy HH:mm")
         formTitleTextField.text = formTemplate?.form?.title
         formTitleTextField.delegate = self
         setupForm()
@@ -74,12 +74,6 @@ class WSPViewController: UIViewController {
             backAndForwardBar.previousButton.isEnabled = false
         } else {
             backAndForwardBar.previousButton.isEnabled = true
-        }
-        guard let form = formTemplate?.form else { return }
-        if currentStepNumber == form.stepsArray.count-1{
-            let config = UIImage.SymbolConfiguration(pointSize: 40, weight: .light, scale: .large)
-            let previousArrow = UIImage(systemName: "arrow.left.circle.fill", withConfiguration: config)
-            backAndForwardBar.nextButton.setImage(previousArrow, for: .normal)
         }
         self.questionsView.reloadData()
     }

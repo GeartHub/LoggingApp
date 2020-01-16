@@ -1,70 +1,101 @@
 {
   "steps": [
     {
-      "title": "Opdracht aanvaarden",
+      "title": "Stap 1: Opdracht aanvaarden.",
       "questionTitles": [
         "Snap je de opdracht cq. klacht?",
         "Heb je nog vragen?"
       ]
     },
     {
-      "title": "Voorbereiding",
+      "title": "Stap 2: Voorbereiding.",
       "questionTitles": [
-        "Persoonlijk beschermingsmiddelen",
-        "Awareness of the Human Factors",
-        "Afspraken maken/taken verdelen",
-        "Support equipment nodig",
-        "Tooling verzamelen",
-        "Special tooling nodig",
-        "Maintenance manuals aanwezig",
-        "Bewustheid van de werkbank discipline"
+        "Persoonlijk beschermingsmiddelen.",
+        "Awareness of the Human Factors.",
+        "Afspraken maken/taken verdelen.",
+        "Support equipment nodig.",
+        "Tooling verzamelen.",
+        "Special tooling nodig.",
+        "Maintenance manuals aanwezig.",
+        "Bewustheid van de werkbank discipline."
       ]
     },
     {
-      "title": "Uitvoering",
+      "title": "Stap 3.1: Safe for maintenance: Check items.",
       "questionTitles": [
-        "Safe for maintenance (Deltion form)",
-        "Safe for entry (AMM type)",
-        "Safe for electric power (AMM type)",
-        "Safe for hydraulic power (AMM type)",
-        "Is afwijken van procedure AMM nodig",
-        "Worden er andere opdrachten uitgevoerd die mijn werkzaamheden kunnen verstoren",
-        "Mogelijkheid netjes en ordelijk te werken"
+        "Check LuForm; 0001 for servicing status and completeness (aircraft technical log).",
+        "Check if wheelchocks are in position.",
+        "Check if fire-extinguisher is around. If OK, check expire dates.",
+        "Check if grounding cable is installed.",
+        "Check if safety covers are installed/placed.",
+        "Check if panels and doors are locked.",
+        "Check if ground safety pin is installed on the Arresting Hook."
       ]
     },
     {
-      "title": "Administratie",
+      "title": "Stap 3.2: Safe for maintenance: Safe for Entry cockpit.",
       "questionTitles": [
-        "Checklist Safe for Maintenance",
-        "Worksheet",
-        "Aircraft technical Log",
-        "Form one",
-        "Additional worksheet",
-        "Red Tag",
-        "Temporary Removal Tag",
-        "Danger Tag",
-        "Circuit breaker Tag"
+        "Check if canopy safety pins are placed and properly installed."
       ]
     },
     {
-      "title": "Controle",
+      "title": "Stap 3.3: Safe for maintenance: Cockpit Inspection.",
       "questionTitles": [
-        "Werkzaamheden gecontroleerd ",
-        "Follow on maintenance noodzakelijk ",
-        "Gecontroleerd op FOD",
-        "Tool control uitgevoerd ",
-        "Administratie op juistheid gecontroleerd"
+        "Check if Battery power switch is in ‘OFF’ position.",
+        "Check if other elctrical switchers are in ‘OFF’ or ‘Safe’ position.",
+        "Check if fire-extinguisher is around. If OK, check expire dates.",
+        "Check Circuitbreakers in Closed Position.",
+        "Check if LG handle is ‘DOWN’ position.",
+        "Check if safety covers are installed/placed.",
+        "Check if panels and doors are locked.",
+        "Check if the Throttle is in the ‘OFF’ position."
       ]
     },
     {
-      "title": "Opruimen/schoonmaken",
+      "title": "Stap 3.4: Uitvoering.",
       "questionTitles": [
-        "Tools en equipment schoongemaakt ",
-        "Werkplek schoongemaakt  ",
-        "Aircraft technical Log ",
-        "Support equipment op zijn plaats gezet ",
-        "Maintenance manuals in de kast gezet ",
-        "Tools ingeleverd"
+        "Safe for entry (AMM type).",
+        "Safe for electric power (AMM type).",
+        "Safe for hydraulic power (AMM type).",
+        "Is afwijken van procedure AMM nodig.",
+        "Worden er andere opdrachten uitgevoerd die mijn werkzaamheden kunnen verstoren.",
+        "Mogelijkheid netjes en ordelijk te werken."
+      ]
+    },
+    {
+      "title": "Stap 4: Administratie.",
+      "questionTitles": [
+        "Checklist Safe for Maintenance.",
+        "Worksheet.",
+        "Aircraft technical Log.",
+        "Form one.",
+        "Additional worksheet.",
+        "Red Tag.",
+        "Temporary Removal Tag.",
+        "Danger Tag.",
+        "Circuit breaker Tag.",
+        "Overgave formulier."
+      ]
+    },
+    {
+      "title": "Stap 5: Controle.",
+      "questionTitles": [
+        "Werkzaamheden gecontroleerd.",
+        "Follow on maintenance noodzakelijk.",
+        "Gecontroleerd op FOD.",
+        "Tool control uitgevoerd.",
+        "Administratie op juistheid gecontroleerd."
+      ]
+    },
+    {
+      "title": "Stap 6: Opruimen/schoonmaken.",
+      "questionTitles": [
+        "Tools en equipment schoongemaakt.",
+        "Werkplek schoongemaakt.",
+        "Aircraft technical Log.",
+        "Support equipment op zijn plaats gezet.",
+        "Maintenance manuals in de kast gezet.",
+        "Tools ingeleverd."
       ]
     }
   ]

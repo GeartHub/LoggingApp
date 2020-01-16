@@ -17,7 +17,7 @@ class WSPOverviewTableViewCell: UITableViewCell {
     var form: FormMO? {
         didSet {
             titleLabel.text = form?.title
-            createAtLabel.text = form?.createdAt?.toString(dateFormat: "dd-MM-yyyy HH:MM")
+            createAtLabel.text = form?.createdAt?.toString(dateFormat: "dd-MM-yyyy HH:mm")
         }
     }
     

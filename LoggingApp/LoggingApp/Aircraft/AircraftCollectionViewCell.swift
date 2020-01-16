@@ -61,10 +61,9 @@ class AircraftCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(typeLabel)
         contentView.addSubview(serialNumberLabel)
         NSLayoutConstraint.activate([
-            typeLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
-            typeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -80),
-            serialNumberLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: 5),
-            serialNumberLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
+            typeLabel.bottomAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -15),
+            typeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50),
+            serialNumberLabel.topAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 15),
             serialNumberLabel.trailingAnchor.constraint(equalTo: typeLabel.trailingAnchor)
         ])
         

@@ -63,7 +63,7 @@ class CoreDataStack {
     
     
     // MARK: - First time launch
-    var aircraftTypes: [String] = ["F-16", "Alouette III", "Cirrus SR22"]
+    var aircraftTypes: [String] = ["F-16", "Aloutte III", "Cirrus SR22"]
     var aircraftSerialNumbers: [String] = ["J-234", "A-319", "SR22-2889"]
     // MARK: - Core Data Saving support
     
@@ -110,6 +110,7 @@ class CoreDataStack {
         }
         
     }
+    
     func saveContext () {
         if managedObjectContext.hasChanges {
             do {
